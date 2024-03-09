@@ -9,7 +9,6 @@ import FirstRoute from './Components/RouteComponents/FirstRoute'
 import SecondRoute from './Components/RouteComponents/SecondRoute'
 import ThirdRoute from './Components/RouteComponents/ThirdRoute'
 import AudioPractice from './Components/AudioPractice'
-import Calculator from './Components/Calculator'
 import MapFunction from './Components/MapFunction'
 import Keys from './Components/Keys'
 import Forms from './Components/Forms'
@@ -18,6 +17,8 @@ import UserBlogComponent from './Components/ContextComponents/UserBlogComponent'
 import StateUsage from './Components/StateUsage'
 import GiftCardProcess from './Components/GiftCardProcess'
 import Fetch from './Components/Fetch'
+import Calculator from './Components/CalculatorComponents/Calculator'
+import UseReducerComponent from './Components/UseReducerComponent'
 
 const desserts = [
   {
@@ -61,10 +62,11 @@ function App() {
               <Route element={<Calculator/>} path='/calculator'></Route>
               <Route element={<MapFunction desserts = {desserts}/>} path='/map'></Route>
               <Route element={<Keys/>} path='/keys'></Route>
-              <Route element={<Forms/>} path='/form'></Route>
+              <Route element={<Forms/>} path='/forms'></Route>
               <Route element={<StateUsage/>} path='/state'></Route>
               <Route element={<GiftCardProcess/>} path='/gift'></Route>
               <Route element={<Fetch/>} path='/fetch'></Route>
+              <Route element={<UseReducerComponent/>} path='/useReducer'></Route>
               <Route element={<UserProvider> <UserBlogComponent/> </UserProvider>} path='/context'></Route>
             </Routes>
         </div>

@@ -1,5 +1,5 @@
 import {useState,useRef} from "react"; 
-import "../styles/calculator.module.css"
+import "./calculator.module.css"
 
 function Calculator() { 
 const inputRef = useRef(null); 
@@ -55,7 +55,7 @@ return (
     <div> 
         <h1 className="text-[2rem]">Simplest Working Calculator</h1> 
     </div> 
-    <form> 
+    <form className="space-x-2"> 
         <p ref={resultRef} className="text-[2rem]"> 
         {result} 
         </p> 

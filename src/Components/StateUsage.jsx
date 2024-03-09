@@ -1,7 +1,8 @@
-import { useState } from "react"; 
+import { useRef, useState } from "react"; 
  
 function GoalForm(props){
   const [formData,setFormData] = useState({ goal: "", by: "" });
+  const goalRef = useRef(null)
 
   function changeHandler(e){
     setFormData({...formData, [e.target.name]: e.target.value});
@@ -16,6 +17,7 @@ function GoalForm(props){
       props.onAdd(formData);
       setFormData({ goal: "", by: "" })
     }
+    goalRef.current.focus();
   }
 
   return (
@@ -25,7 +27,7 @@ function GoalForm(props){
       </h1>
       <form onSubmit={submitHandler}>
         <div className="flex flex-row space-x-2 h-8">
-          <input type="text" name="goal" placeholder="Goal.." value={formData.goal} onChange={changeHandler}/>
+          <input type="text" name="goal" placeholder="Goal.." value={formData.goal} onChange={changeHandler} ref={goalRef}/>
           <input type="text" name="by" placeholder="by.." value={formData.by} onChange={changeHandler}/>
         </div>
         <div className="justify-end flex">
