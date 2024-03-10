@@ -19,6 +19,7 @@ import GiftCardProcess from './Components/GiftCardProcess'
 import Fetch from './Components/Fetch'
 import Calculator from './Components/CalculatorComponents/Calculator'
 import UseReducerComponent from './Components/UseReducerComponent'
+import CustomHooks from './Components/CustomHookComponents/CustomHooks'
 
 const desserts = [
   {
@@ -66,6 +67,7 @@ function App() {
               <Route element={<StateUsage/>} path='/state'></Route>
               <Route element={<GiftCardProcess/>} path='/gift'></Route>
               <Route element={<Fetch/>} path='/fetch'></Route>
+              <Route element={<CustomHooks/>} path='/customHook'></Route>
               <Route element={<UseReducerComponent/>} path='/useReducer'></Route>
               <Route element={<UserProvider> <UserBlogComponent/> </UserProvider>} path='/context'></Route>
             </Routes>
