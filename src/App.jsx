@@ -20,6 +20,9 @@ import Fetch from './Components/Fetch'
 import Calculator from './Components/CalculatorComponents/Calculator'
 import UseReducerComponent from './Components/UseReducerComponent'
 import CustomHooks from './Components/CustomHookComponents/CustomHooks'
+import ComponentComposition from './Components/ComponentCompositionComponents/ComponentComposition'
+import LiveOrders from './Components/ReactChildrenAPI\'s/LiveOrders'
+import RadioGroupComponent from './Components/ReactChildrenAPI\'s/RadioGroupComponent'
 
 const desserts = [
   {
@@ -49,28 +52,31 @@ const desserts = [
 function App() {
   return (
     <Router>
-          <Navbar/>
+        <Navbar/>
         <div className='flex align-middle justify-center p-8 mx-24 pt-32'>
-            <Routes>  
-              <Route element={<Video/>} path='/' />
-              <Route element={<Image/>} path='/image' />
-              <Route element={<ConditionalRendering/>} path='/conditionalrendering' />
-              <Route element={<RoutesHomePage/>} path='/routes' />
-              <Route element={<FirstRoute/>} path='/routes/first'></Route>
-              <Route element={<SecondRoute/>} path='/routes/second'></Route>
-              <Route element={<ThirdRoute/>} path='/routes/third'></Route>
-              <Route element={<AudioPractice/>} path='/audio'></Route>
-              <Route element={<Calculator/>} path='/calculator'></Route>
-              <Route element={<MapFunction desserts = {desserts}/>} path='/map'></Route>
-              <Route element={<Keys/>} path='/keys'></Route>
-              <Route element={<Forms/>} path='/forms'></Route>
-              <Route element={<StateUsage/>} path='/state'></Route>
-              <Route element={<GiftCardProcess/>} path='/gift'></Route>
-              <Route element={<Fetch/>} path='/fetch'></Route>
-              <Route element={<CustomHooks/>} path='/customHook'></Route>
-              <Route element={<UseReducerComponent/>} path='/useReducer'></Route>
-              <Route element={<UserProvider> <UserBlogComponent/> </UserProvider>} path='/context'></Route>
-            </Routes>
+          <Routes>  
+            <Route element={<Video/>} path='/' />
+            <Route element={<Image/>} path='/image' />
+            <Route element={<ConditionalRendering/>} path='/conditionalrendering' />
+            <Route element={<RoutesHomePage/>} path='/routes' />
+            <Route element={<FirstRoute/>} path='/routes/first'></Route>
+            <Route element={<SecondRoute/>} path='/routes/second'></Route>
+            <Route element={<ThirdRoute/>} path='/routes/third'></Route>
+            <Route element={<AudioPractice/>} path='/audio'></Route>
+            <Route element={<Calculator/>} path='/calculator'></Route>
+            <Route element={<MapFunction desserts = {desserts}/>} path='/map'></Route>
+            <Route element={<Keys/>} path='/keys'></Route>
+            <Route element={<Forms/>} path='/forms'></Route>
+            <Route element={<StateUsage/>} path='/state'></Route>
+            <Route element={<RadioGroupComponent/>} path='/RadioGroup'></Route>
+            <Route element={<GiftCardProcess/>} path='/gift'></Route>
+            <Route element={<Fetch/>} path='/fetch'></Route>
+            <Route element={<LiveOrders/>} path='/liveOrders'></Route>
+            <Route element={<ComponentComposition/>} path='/componentComposition'></Route>
+            <Route element={<CustomHooks/>} path='/customHook'></Route>
+            <Route element={<UseReducerComponent/>} path='/useReducer'></Route>
+            <Route element={<UserProvider> <UserBlogComponent/> </UserProvider>} path='/context'></Route>
+          </Routes>
         </div>
       </Router>
   )
