@@ -26,7 +26,8 @@ import RadioGroupComponent from './Components/ReactChildrenAPI\'s/RadioGroupComp
 import LoginComponent from './Components/SpreadOperatorComponents/LoginComponent'
 import MouseTracker from './Components/MouseTrackerComponents/MouseTracker'
 import "./App.css"
-
+import DataFetcherComponent from './Components/DataFetcherComponents/DataFetcherComponent'
+import MouseTracerWithRenderComponent from './Components/DataFetcherComponents/MouseTracerWithRenderComponent'
 
 const desserts = [
   {
@@ -72,12 +73,14 @@ function App() {
             <Route element={<Keys/>} path='/keys'></Route>
             <Route element={<Forms/>} path='/forms'></Route>
             <Route element={<MouseTracker/>} path='/mouseTracker'></Route>
+            <Route element={<MouseTracerWithRenderComponent/>} path='/mouseTrackerWithRender'></Route>
             <Route element={<StateUsage/>} path='/state'></Route>
             <Route element={<LoginComponent/>} path='/loginComponent'></Route>
             <Route element={<RadioGroupComponent/>} path='/RadioGroup'></Route>
             <Route element={<GiftCardProcess/>} path='/gift'></Route>
             <Route element={<Fetch/>} path='/fetch'></Route>
             <Route element={<LiveOrders/>} path='/liveOrders'></Route>
+            <Route element={<DataFetcherComponent/>} path='/dataFetcher'></Route>
             <Route element={<ComponentComposition/>} path='/componentComposition'></Route>
             <Route element={<CustomHooks/>} path='/customHook'></Route>
             <Route element={<UseReducerComponent/>} path='/useReducer'></Route>
