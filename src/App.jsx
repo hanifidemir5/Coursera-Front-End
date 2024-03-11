@@ -23,6 +23,10 @@ import CustomHooks from './Components/CustomHookComponents/CustomHooks'
 import ComponentComposition from './Components/ComponentCompositionComponents/ComponentComposition'
 import LiveOrders from './Components/ReactChildrenAPI\'s/LiveOrders'
 import RadioGroupComponent from './Components/ReactChildrenAPI\'s/RadioGroupComponent'
+import LoginComponent from './Components/SpreadOperatorComponents/LoginComponent'
+import MouseTracker from './Components/MouseTrackerComponents/MouseTracker'
+import "./App.css"
+
 
 const desserts = [
   {
@@ -67,7 +71,9 @@ function App() {
             <Route element={<MapFunction desserts = {desserts}/>} path='/map'></Route>
             <Route element={<Keys/>} path='/keys'></Route>
             <Route element={<Forms/>} path='/forms'></Route>
+            <Route element={<MouseTracker/>} path='/mouseTracker'></Route>
             <Route element={<StateUsage/>} path='/state'></Route>
+            <Route element={<LoginComponent/>} path='/loginComponent'></Route>
             <Route element={<RadioGroupComponent/>} path='/RadioGroup'></Route>
             <Route element={<GiftCardProcess/>} path='/gift'></Route>
             <Route element={<Fetch/>} path='/fetch'></Route>

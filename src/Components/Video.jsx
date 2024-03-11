@@ -10,7 +10,7 @@ const Video = () => {
 };
 
 const MyVideo = () => {
-    const vidUrl = "https://www.youtube.com/watch?v=TNhKAJwlj04&list=RDTNhKAJwlj04&start_radio=1&rv=TNhKAJwlj04&t=3"
+    const vidUrl = "https://www.youtube.com/watch?v=uNd5kvrGHjk"
   return (
     <ReactPlayer
         url={vidUrl} 

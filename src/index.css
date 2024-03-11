@@ -10,3 +10,11 @@ button{
 body{
     background-color: #CCB69B;
 }
+
+.PrimaryButton{
+    background-color: #41554e;
+}
+
+.SecondaryButton{
+    background-color: #41554e;
+}

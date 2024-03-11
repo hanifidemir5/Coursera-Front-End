@@ -38,6 +38,7 @@
   button:nth-last-child(2){
     background: tomato;
     color: white;
+    margin: 1rem;
   }
   
   button:nth-last-child(2):hover{
@@ -48,6 +49,7 @@
   button:nth-last-child(1) {
     background: red;
     color: white;
+    margin: 1rem;
   }
   
   button:nth-last-child(1):hover{
