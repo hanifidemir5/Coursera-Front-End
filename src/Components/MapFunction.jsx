@@ -12,7 +12,7 @@ export default function MapFunction({desserts}){
   })
 
   return (
-    <div className="flex items-start justify-start p-14">
+    <div>
       <ul className="text-4xl">
         {lowCalorieDesserts}
       </ul>

@@ -27,7 +27,7 @@ export default function Keys() {
         setTodos([...todos].reverse());
     }
     return (
-        <div className="flex flex-col">
+        <div className="flex flex-col justify-center">
             <table>
                 <tbody>
                     {todos?.map((todo) => (
@@ -35,7 +35,9 @@ export default function Keys() {
                     ))}
                 </tbody>
             </table>
-            <button onClick={reverseOrder} className="flex-1 self-end">Reverse</button>
+            <div className="flex justify-end w-full">
+                    <button onClick={reverseOrder}>Reverse</button>
+            </div>
         </div>
     )
 }

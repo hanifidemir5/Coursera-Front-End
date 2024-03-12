@@ -3,9 +3,7 @@ import ReactPlayer from "react-player/youtube";
 
 const Video = () => {
   return (
-    <div>
       <MyVideo />
-    </div>
   );
 };
 

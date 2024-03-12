@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function GiftCardProcess() {
   const [giftCard, setGiftCard] = useState(
@@ -22,6 +23,10 @@ export default function GiftCardProcess() {
         });
     }
 
+    function reload(){
+      window.location.reload()
+    }
+
   return (
     <div style={{padding: '40px'}}>
       <h1>
@@ -37,10 +42,18 @@ export default function GiftCardProcess() {
         {giftCard.instructions}
       </p>
       {
-        giftCard.valid && (
-          <button onClick={spendGiftCard}>
-            Spend Gift Card
-          </button>
+        giftCard.valid ? (
+          <div className="flex justify-end">
+            <button onClick={spendGiftCard}>
+              Spend Gift Card
+            </button>
+          </div> 
+        ) : (
+          <div className="flex justify-start">
+            <button onClick={reload}>
+              <Link to="/gift">Back</Link>
+            </button>
+          </div>
         )
       }
     </div>

@@ -30,7 +30,7 @@ const PanelMouseLogger = ({mousePosition}) =>{
         return null;
     }
     return(
-        <div className="flex flex-col  text-2xl space-x-2 space-y-4 border-[0.25rem] border-black p-4">
+        <div className="flex flex-col text-2xl h-3/6 w-4/6 justify-between space-y-4 border-[0.25rem] border-black p-4">
             <p>Mouse position:</p>
             <div className="flex flex-row justify-between align-middle text-center">
                 <span className="p-2 m-2">x: {mousePosition.x}</span>
@@ -56,7 +56,7 @@ const PointMouseTracker = withMousePosition(PointMouseLogger)
 
 export default function MouseTracker(){
     return(
-        <div className="w-2/6">
+        <div className="w-2/6 h-5/6 flex flex-col justify-center items-center">
             <header className="text-3xl mb-8 text-center">Little Lemon Restaurant</header>
             <PanelMouseTracker/> 
             <PointMouseTracker/> 

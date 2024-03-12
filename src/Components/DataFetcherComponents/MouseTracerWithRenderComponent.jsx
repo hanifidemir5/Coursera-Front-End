@@ -30,7 +30,7 @@ const MousePosition = ({ render }) => {
 const PanelMouseLogger = () => {
   // The below if statement can be removed after the render props pattern is implemented
   return (
-    <div className="flex flex-col  text-2xl space-x-2 space-y-4 border-[0.25rem] border-black p-4">
+    <div className="flex flex-col text-2xl h-3/6 w-4/6 justify-between space-y-4 border-[0.25rem] border-black p-4">
         <p>Mouse position:</p>
         <MousePosition 
             render={({mousePosition}) => (
@@ -50,7 +50,7 @@ const PointMouseLogger = () => {
   return (
       <MousePosition render={({mousePosition}) => (
         <p className="text-center text-2xl p-4">
-            ({mousePosition.x},{mousePosition.y})
+            ( {mousePosition.x} , {mousePosition.y} )
         </p>
         )}
       />
@@ -59,7 +59,7 @@ const PointMouseLogger = () => {
 
 function MouseTracerWithRenderComponent() {
   return (
-    <div className="w-2/6">
+    <div className="w-2/6 h-5/6 flex flex-col justify-center items-center">
         <header className="text-3xl mb-8 text-center">Little Lemon Restaurant</header>
         <PanelMouseLogger />
         <PointMouseLogger />

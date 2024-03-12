@@ -2,6 +2,7 @@
     margin-top: 3rem;
     font-family: sans-serif;
   }
+
   input {
     border-radius: 0.25rem;
     border-width: 0.15rem;
@@ -18,7 +19,7 @@
     text-indent: 0.75rem;
   }
   
-  button {
+  .calculator-button {
     border-color: rgb(22,78,99);
     color: black;
     border-radius: 0.75rem;
@@ -26,33 +27,31 @@
     border-width: 0.25rem;
     font-size: 20px;
     border-radius: 5px;
-    padding: 1rem;
-    margin: 1rem;
   }
   
-  button:hover{
+  .calculator-button:hover{
     background-color: rgb(34, 211, 238);
     color:white;
   }
   
-  button:nth-last-child(2){
+  .calculator-button:nth-last-child(2){
     background: tomato;
     color: white;
     margin: 1rem;
   }
   
-  button:nth-last-child(2):hover{
+  .calculator-button:nth-last-child(2):hover{
     background: tomato;
     color: black;
   }
   
-  button:nth-last-child(1) {
+  .calculator-button:nth-last-child(1) {
     background: red;
     color: white;
     margin: 1rem;
   }
   
-  button:nth-last-child(1):hover{
+  .calculator-button:nth-last-child(1):hover{
     background: tomato;
     color: black;
   }

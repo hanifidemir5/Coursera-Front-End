@@ -1,5 +1,5 @@
 import {useState,useRef} from "react"; 
-import "../../styles/calculator.module.css"
+import "./calculator.css"
 
 function Calculator() { 
 const inputRef = useRef(null); 
@@ -65,12 +65,12 @@ return (
         type="number" 
         placeholder="Type a number" 
         /> 
-        <button onClick={plus}>add</button> 
-        <button onClick={minus}>minus</button> 
-        <button onClick={times}>times</button> 
-        <button onClick={divide}>divide</button> 
-        <button onClick={resetInput}>resetInput</button> 
-        <button onClick={resetResult}>resetResult</button> 
+        <button className="calculator-button" onClick={plus}>add</button> 
+        <button className="calculator-button" onClick={minus}>minus</button> 
+        <button className="calculator-button" onClick={times}>times</button> 
+        <button className="calculator-button" onClick={divide}>divide</button> 
+        <button className="calculator-button" onClick={resetInput}>resetInput</button> 
+        <button className="calculator-button" onClick={resetResult}>resetResult</button> 
         </form> 
     </div> 
     ); 

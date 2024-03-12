@@ -58,34 +58,36 @@ function App() {
   return (
     <Router>
         <Navbar/>
-        <div className='flex align-middle justify-center p-8 mx-24 pt-32'>
-          <Routes>  
-            <Route element={<Video/>} path='/' />
-            <Route element={<Image/>} path='/image' />
-            <Route element={<ConditionalRendering/>} path='/conditionalrendering' />
-            <Route element={<RoutesHomePage/>} path='/routes' />
-            <Route element={<FirstRoute/>} path='/routes/first'></Route>
-            <Route element={<SecondRoute/>} path='/routes/second'></Route>
-            <Route element={<ThirdRoute/>} path='/routes/third'></Route>
-            <Route element={<AudioPractice/>} path='/audio'></Route>
-            <Route element={<Calculator/>} path='/calculator'></Route>
-            <Route element={<MapFunction desserts = {desserts}/>} path='/map'></Route>
-            <Route element={<Keys/>} path='/keys'></Route>
-            <Route element={<Forms/>} path='/forms'></Route>
-            <Route element={<MouseTracker/>} path='/mouseTracker'></Route>
-            <Route element={<MouseTracerWithRenderComponent/>} path='/mouseTrackerWithRender'></Route>
-            <Route element={<StateUsage/>} path='/state'></Route>
-            <Route element={<LoginComponent/>} path='/loginComponent'></Route>
-            <Route element={<RadioGroupComponent/>} path='/RadioGroup'></Route>
-            <Route element={<GiftCardProcess/>} path='/gift'></Route>
-            <Route element={<Fetch/>} path='/fetch'></Route>
-            <Route element={<LiveOrders/>} path='/liveOrders'></Route>
-            <Route element={<DataFetcherComponent/>} path='/dataFetcher'></Route>
-            <Route element={<ComponentComposition/>} path='/componentComposition'></Route>
-            <Route element={<CustomHooks/>} path='/customHook'></Route>
-            <Route element={<UseReducerComponent/>} path='/useReducer'></Route>
-            <Route element={<UserProvider> <UserBlogComponent/> </UserProvider>} path='/context'></Route>
-          </Routes>
+        <div className='flex align-middle justify-center p-8 h-[35rem]'>
+          <div className='flex items-center justify-center h-full w-full'>
+            <Routes>  
+              <Route element={<Video/>} path='/' />
+              <Route element={<Image/>} path='/image' />
+              <Route element={<ConditionalRendering/>} path='/conditionalrendering' />
+              <Route element={<RoutesHomePage/>} path='/routes' />
+              <Route element={<FirstRoute/>} path='/routes/first'></Route>
+              <Route element={<SecondRoute/>} path='/routes/second'></Route>
+              <Route element={<ThirdRoute/>} path='/routes/third'></Route>
+              <Route element={<AudioPractice/>} path='/audio'></Route>
+              <Route element={<MapFunction desserts = {desserts}/>} path='/map'></Route>
+              <Route element={<Keys/>} path='/keys'></Route>
+              <Route element={<Forms/>} path='/forms'></Route>
+              <Route element={<MouseTracker/>} path='/mouseTracker'></Route>
+              <Route element={<MouseTracerWithRenderComponent/>} path='/mouseTrackerWithRender'></Route>
+              <Route element={<StateUsage/>} path='/state'></Route>
+              <Route element={<LoginComponent/>} path='/loginComponent'></Route>
+              <Route element={<RadioGroupComponent/>} path='/RadioGroup'></Route>
+              <Route element={<GiftCardProcess/>} path='/gift'></Route>
+              <Route element={<Fetch/>} path='/fetch'></Route>
+              <Route element={<LiveOrders/>} path='/liveOrders'></Route>
+              <Route element={<DataFetcherComponent/>} path='/dataFetcher'></Route>
+              <Route element={<ComponentComposition/>} path='/componentComposition'></Route>
+              <Route element={<CustomHooks/>} path='/customHook'></Route>
+              <Route element={<UseReducerComponent/>} path='/useReducer'></Route>
+              <Route element={<UserProvider> <UserBlogComponent/> </UserProvider>} path='/context'></Route>
+              <Route element={<Calculator/>} path='/calculator'></Route>
+            </Routes>
+          </div>
         </div>
       </Router>
   )

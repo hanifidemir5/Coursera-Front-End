@@ -26,7 +26,7 @@ function GoalForm(props){
         Goal List
       </h1>
       <form onSubmit={submitHandler}>
-        <div className="flex flex-row space-x-2 h-8">
+        <div className="flex flex-row space-x-2 h-8 ">
           <input type="text" name="goal" placeholder="Goal.." value={formData.goal} onChange={changeHandler} ref={goalRef}/>
           <input type="text" name="by" placeholder="by.." value={formData.by} onChange={changeHandler}/>
         </div>
@@ -73,14 +73,15 @@ export default function StateUsage() {
   function addGoal(goal) {
     updateAllGoals([...allGoals, goal]);
   }
-
  
   return ( 
-    <div className="space-y-3 lg:min-w-[800px]">
-      <BasicState/>
-      <GoalForm onAdd={addGoal} />
-      <ListOfGoals allGoals={allGoals}/>
-    </div> 
+    <div >
+      <div className="space-y-3 lg:min-w-[600px]">
+        <BasicState/>
+        <GoalForm onAdd={addGoal} />
+        <ListOfGoals allGoals={allGoals}/>
+      </div> 
+    </div>
   ); 
 } 
 

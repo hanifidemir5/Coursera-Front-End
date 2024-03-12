@@ -8,14 +8,14 @@ export const RadioGroup = ({ onChange, selected, children }) => {
     });
   });
 
-  return <div className="flex">{RadioOptions}</div>;
+  return <div>{RadioOptions}</div>;
 };
 
 export const RadioOption = ({ value, checked, onChange, children }) => {
   return (
-    <div className="m-2 cursor-pointer ">
+    <div className="flex flex-row m-2 cursor-pointer">
       <input
-        className="mr-2 cursor-pointer "
+        className="mr-2 cursor-pointer w-1/12 "
         id={value}
         type="radio"
         name={value}

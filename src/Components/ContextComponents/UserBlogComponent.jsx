@@ -44,7 +44,7 @@ function ContextPageContent(){
 function UserBlogComponent () {
     return (
         <>
-            <div className="flex flex-col">
+            <div className="flex flex-col w-4/6">
                 <Header/>
                 <ContextPageContent/>
             </div>

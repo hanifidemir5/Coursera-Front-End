@@ -36,7 +36,7 @@ const Navbar = () => {
                     </div>
                 </div>
                 <div>
-                    <ul className='flex flex-col text-center flex-nowrap'>
+                    <ul className='flex flex-col text-center flex-nowrap '>
                         { navDatas.map((data) =>
                             <Link key={data.id} to={`${data.link}`} className="hover:bg-[#1A412E] hover:text-white text-[#EFF1ED] font-bold py-2 rounded-full block w-full self-center">{data.text}</Link>
                         )}

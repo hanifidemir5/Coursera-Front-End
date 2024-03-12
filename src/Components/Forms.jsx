@@ -97,7 +97,7 @@ export default function Forms() {
   
 
     return ( 
-      <div className="w-2/6">
+      <div className="h-full">
         <div className="border-[0.5rem] border-black mt-4 p-2 space-y-2">
           <form onSubmit={handleSubmit} className="flex flex-col space-y-2"> 
             <input 
