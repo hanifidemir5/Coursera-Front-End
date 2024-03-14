@@ -35,7 +35,7 @@ function Image() {
                 Hello {name}
                 {day >= 1 && day <= 5 ? <Workday/>: <Weekend/>}
             </h1>
-            <img src={"Subscription.png"} className="w-screen h-[450px]" alt="picture of subscription" />
+            <img src={"GigaDonk.png"} className="w-screen h-[450px]" alt="picture of subscription" />
         </div>
     )
 }
