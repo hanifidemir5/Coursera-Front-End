@@ -1,0 +1,15 @@
+.main-image-container{
+    display: flex;
+    flex-direction: column;    
+}
+
+.image-header{
+    text-align: center;
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+    padding:1.5rem 0rem;
+}
+
+.image{
+    height: 450px;
+}

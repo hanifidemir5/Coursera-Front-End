@@ -1,4 +1,4 @@
-import "./imagecss.css"
+import "../../assets/css/imagecss.css"
 
 function Workday (){
     return (
@@ -28,14 +28,16 @@ function Image() {
         name = "Susan" 
         console.log(name)
     } 
-    console.log(day)
     return (
-        <div className="flex flex-col">
-            <h1 className="text-center text-3xl pb-6">
+        <div className="main-image-container">
+            <h1 className="image-header">
                 Hello {name}
                 {day >= 1 && day <= 5 ? <Workday/>: <Weekend/>}
             </h1>
-            <img src={"GigaDonk.png"} className="w-screen h-[450px]" alt="picture of subscription" />
+            <img src={"GigaDonk.png"} className="image" alt="picture of subscription" />
+            <p style={{textAlign:"center",fontStyle:"italic"}}>
+                (GigaDonk for context)
+            </p>
         </div>
     )
 }

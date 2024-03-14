@@ -4,8 +4,7 @@ import { navDatas } from '../../Datas/NavbarQueryset.js';
 import { socialDataSet } from "../../Datas/SocialsQueryset.js";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import './Navbarcss.css';
-
+import "../../assets/css/Navbarcss.css"
 
 const NavItem = () => {
     return (
