@@ -1,14 +1,40 @@
-function ConditionalRendering() {
-     const val = prompt('Anything but a 0')
+import { useState } from "react";
 
-     return (
-         <div>
-             <h1>Please don't type in a zero {typeof(val)}</h1>
-             {val &&
-                 <h2>Yay, no 0 was typed in!</h2>
-             }
-         </div>
-     )
+function ConditionalRendering() {
+    const [value,setValue] = useState(null);
+    const [clikced, setClikced] = useState(false)
+    const [buttonText, updateButtonText] = useState("Begin")
+
+    const onBegin = () =>{
+        const val = prompt('Print something and hit ok or quit with esc or cliking cancel button.')
+        updateButtonText("Continue")
+        setValue(val)
+        setClikced(true)
+    }
+
+    return (
+        <div className="flex flex-col items-center">
+            <h1 style={{fontSize:"3rem"}}>Conditional Rendering Page</h1>
+            {clikced && (
+                value 
+                ?   (
+                        <div className="flex flex-col items-center">
+                            <img src="happycat.png" alt="happycat" style={{height:"15rem"}} />
+                            <h1 style={{fontSize:"2rem",padding:"1rem"}}>Yeeey something meaningfull.</h1>
+                        </div>
+                    )
+                :   (
+                        <div>
+                            <img src="sadcatcover.jpg" alt="sadcat" style={{height:"15rem"}} />
+                            <h1 style={{fontSize:"2rem",padding:"1rem"}}>Empty input just as my soul...</h1>
+                        </div>
+                    )
+            )}
+            <button onClick={onBegin}>
+                {buttonText}
+            </button>
+        </div>
+    )
 }
 
 export default ConditionalRendering;

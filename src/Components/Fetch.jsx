@@ -8,6 +8,7 @@ export default function     Fetch() {
         .then(response => response.json())
         .then(data => setUser(data));
     }
+    
     useEffect(() => {
         fetchData();
     },[]);

@@ -57,7 +57,7 @@ function App() {
   return (
     <Router>
         <Navbar/>
-        <div className='flex align-middle justify-center p-8 h-[35rem]'>
+        <div className='flex align-middle justify-center p-8 h-[35rem]'>  
           <div className='flex items-center justify-center h-full w-full'>
             <Routes>  
               <Route element={<Video/>} path='/' />

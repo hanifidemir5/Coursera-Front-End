@@ -7,7 +7,8 @@
     background: #504136;
     padding: 0px 50px;
     transition: all;
-    justify-content: space-between;    
+    justify-content: space-between;   
+     
     @media (min-width: 768px) { 
         padding: 0px 152px;
     }
