@@ -1,0 +1,33 @@
+.form-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    column-gap: 1.5rem;
+    height: 100%;
+    width: 100%;
+}
+
+.form-item{
+    align-self: center;
+    border-width: 0.5rem;
+    border-color: lightblue;
+    margin-top: 1rem;
+    padding: 0.5rem;
+    border-radius: 1.25rem;
+    background-color: lightblue;
+}
+
+.FieldError{
+    color: rgb(147, 51, 234);
+    font-weight: bold;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    bottom: -0.75rem;
+    margin: 0rem 0.25rem ;
+    text-decoration-line: underline;
+}
+
+.first-form-element{
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+}

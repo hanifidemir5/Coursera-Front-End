@@ -56,7 +56,7 @@ body{
 }
 
 button{
-    border-radius: 0.5rem;
+    border-radius: 9999px;
     background-color: black;
     color: rebeccapurple;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -64,11 +64,22 @@ button{
     padding: 0.75rem;
 }
 
-button[type=submit]{
-    border-radius: 0.5rem;
+button:enabled{
     background-color: black;
     color: rebeccapurple;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    margin: 0.75rem 0rem;
+    margin: 0.75rem 0.25rem;
     padding: 0.75rem;
+    transition: opacity 4s ease, scale 0.2s ease, color 3s ease, background-color 3s ease;
+}
+
+button:disabled{
+    color: black;
+    background-color: rebeccapurple;
+    transition: opacity 3s ease;
+    opacity: 0.5;
+}
+
+button:enabled:hover{
+    scale: 1.10;
 }

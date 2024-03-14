@@ -1,15 +1,15 @@
 import { useState,useRef } from "react";
 import { validateEmail } from "../../Rules/Utils";
-
+import "../../assets/css/formscss.css"
 const PasswordErrorMessage = () => {
   return (
-    <p className="FieldError text-purple-600 font-bold text-xs -bottom-3 my-1 underline">Password should have at least 8 characters</p>
+    <p className="FieldError">Password should have at least 8 characters</p>
   );
 };
 
 const PasswordStatusMessage = (prop) => {
   return (
-    <p className="FieldError text-purple-600 font-bold text-xs -bottom-3 my-1 underline">You should enter {8 - prop.length} more characters.</p>
+    <p className="FieldError">You should enter {8 - prop.length} more characters.</p>
   );
 };
 
@@ -28,18 +28,19 @@ const FirstFormComponent = () => {
   }
 
   return (
-    <div className="border-[0.5rem] border-black mt-4 p-2 space-y-2">
-      <form onSubmit={handleSubmit} className="flex flex-col space-y-2"> 
+    <div className="form-item">
+      <form onSubmit={handleSubmit} className="first-form-element"> 
         <input 
           value={value} 
           onChange={handleChange} 
           type="text" 
+          placeholder="Enter document title"
         /> 
         <input 
             ref={fileInput}
             type="file"
         />
-        <button className="self-end">
+        <button>
           Submit
         </button>
       </form> 
@@ -57,7 +58,7 @@ const SecondFormComponent = () => {
   }
 
   return(
-    <div className="border-[0.5rem] border-black mt-4 p-2 space-y-2">
+    <div className="form-item ">
       <form onSubmit={handleSubmit}>
         <fieldset>
           <div className="field w-full">
@@ -74,7 +75,7 @@ const SecondFormComponent = () => {
             className="w-full"
             />
           </div>
-          <div className="flex justify-end">
+          <div className="flex flex-col">
             <button type="submit" disabled={!name} >Submit</button>
           </div>
         </fieldset>
@@ -101,7 +102,7 @@ const ThirdFormComponent = ({onSubmit}) => {
   }
 
   return (
-    <div className="border-[0.5rem] border-black mt-4 p-2 space-y-2">
+    <div className="form-item ">
       <form onSubmit={handleSubmit}>
         <fieldset>
           <h2 htmlFor="feedback" className="text-2xl my-4">Feedback Form</h2>
@@ -127,7 +128,7 @@ const ThirdFormComponent = ({onSubmit}) => {
               onChange={e =>setComment(e.target.value)}
             />
           </div>
-          <div className="flex justify-end">
+          <div className="flex flex-col">
             <button type="submit" disabled={isDisabled}>Submit</button>
           </div>
         </fieldset>
@@ -182,25 +183,25 @@ const FourthFormComponent = () =>{
   };
 
   return (
-      <div className="border-[0.5rem] border-black mt-4 p-2 space-y-2">
+      <div className="form-item">
         <form onSubmit={handleSubmit}>
           <fieldset>
-            <h2 className="my-6 text-3xl">Sign Up</h2>
+            <h2 className="my-6 text-3xl text-center">Sign Up</h2>
             <div className="Field">
               <label>
                 First name: <sup>*</sup>
               </label>
-              <input value={firstName} onChange={e => setFirstName(e.target.value)} placeholder="First name" />
+              <input type="text" value={firstName} onChange={e => setFirstName(e.target.value)} placeholder="First name" />
             </div>
             <div className="Field">
               <label>Last name: </label> <sup>*</sup>
-              <input value={lastName} onChange={e => setLastName(e.target.value)} placeholder="Last name" />
+              <input type="text" value={lastName} onChange={e => setLastName(e.target.value)} placeholder="Last name" />
             </div>
             <div className="Field">
               <label>
                 Email address: <sup>*</sup>
               </label>
-              <input value={email} onChange={e => setEmail(e.target.value)} placeholder="Email address" />
+              <input type="text" value={email} onChange={e => setEmail(e.target.value)} placeholder="Email address" />
             </div>
             <div className="Field">
               <label>
@@ -240,17 +241,17 @@ const FourthFormComponent = () =>{
                   ) : null
                 }
             </div>
-            <div className="Field">
-              <label>
+            <label>
                 Role: <sup>*</sup>
               </label>
+            <div className="select-field">
               <select value={role} onChange={(e) => setRole(e.target.value)}>
                 <option value="role">Role</option>
                 <option value="individual">Individual</option>
                 <option value="business">Business</option>
               </select>
             </div>
-            <div className="flex justify-end">
+            <div className="flex flex-col">
               <button type="submit" disabled={!getIsFormValid()}>
                 Create account
               </button>
@@ -266,11 +267,11 @@ export default function Forms() {
       console.log("Form has been submitted!")
     }
     return ( 
-      <div className="h-full">
+      <div className="form-container">
         <FirstFormComponent/>
-        <SecondFormComponent/>
-        <ThirdFormComponent onSubmit={handleSubmit}/>
         <FourthFormComponent/>
+        <ThirdFormComponent onSubmit={handleSubmit}/>
+        <SecondFormComponent/>
       </div>
     ); 
 }

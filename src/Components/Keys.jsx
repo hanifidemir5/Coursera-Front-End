@@ -1,12 +1,12 @@
 import { useState } from "react";
 
 const ToDo = (props) => (
-    <tr>
+    <tr className="flex space-x-2 items-center text-center">
         <td>
             <label >{props.id}</label>
         </td>
         <td>
-            <input />
+            <input type="text"/>
         </td>
         <td>
             <label>{props.createdAt}</label>
@@ -29,13 +29,13 @@ export default function Keys() {
     return (
         <div className="flex flex-col justify-center">
             <table>
-                <tbody>
+                <tbody className="flex flex-col space-y-2">
                     {todos?.map((todo) => (
                         <ToDo key={todo.id} id={todo.id} createdAt={todo.createdAt}/>
                     ))}
                 </tbody>
             </table>
-            <div className="flex justify-end w-full">
+            <div className="flex flex-col">
                     <button onClick={reverseOrder}>Reverse</button>
             </div>
         </div>
