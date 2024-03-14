@@ -2,7 +2,7 @@ export var navDatas = [
     {
         id : 1,
         text : 'About',
-        link : '/'
+        link : '/image'
     },
     {
         id : 2,
