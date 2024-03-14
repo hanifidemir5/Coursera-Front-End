@@ -1,8 +1,8 @@
 import React from 'react'
-import Image from "./Components/Image"
+import Image from "./Components/ImageComponents/Image"
 import Video from './Components/Video' 
 import ConditionalRendering from './Components/ConditionalRendering'
-import Navbar from './Components/Navbar'
+import Navbar from './Components/NavbarComponents/Navbar'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import RoutesHomePage from './pages/RoutesHomePage'
 import FirstRoute from './Components/RouteComponents/FirstRoute'
@@ -25,7 +25,6 @@ import LiveOrders from './Components/ReactChildrenAPI\'s/LiveOrders'
 import RadioGroupComponent from './Components/ReactChildrenAPI\'s/RadioGroupComponent'
 import LoginComponent from './Components/SpreadOperatorComponents/LoginComponent'
 import MouseTracker from './Components/MouseTrackerComponents/MouseTracker'
-import "./App.css"
 import DataFetcherComponent from './Components/DataFetcherComponents/DataFetcherComponent'
 import MouseTracerWithRenderComponent from './Components/DataFetcherComponents/MouseTracerWithRenderComponent'
 

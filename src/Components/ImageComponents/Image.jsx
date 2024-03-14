@@ -1,3 +1,4 @@
+import "./imagecss.css"
 
 function Workday (){
     return (
@@ -29,13 +30,13 @@ function Image() {
     } 
     console.log(day)
     return (
-        <>
-            <h1>
-                nebere len {name}
+        <div className="flex flex-col">
+            <h1 className="text-center text-3xl pb-6">
+                Hello {name}
                 {day >= 1 && day <= 5 ? <Workday/>: <Weekend/>}
             </h1>
-            <img src={"Subscription.png"} style={{height:400}} alt="picture of subscription" />
-        </>
+            <img src={"Subscription.png"} className="w-screen h-[450px]" alt="picture of subscription" />
+        </div>
     )
 }
 

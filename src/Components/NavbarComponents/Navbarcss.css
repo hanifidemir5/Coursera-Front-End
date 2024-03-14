@@ -1,0 +1,132 @@
+.main-container{
+    display: flex; 
+    align-items: center; 
+    width: 100%; 
+    height: 6rem; 
+    max-width: 1575px;
+    background: #504136;
+    padding: 0px 50px;
+    transition: all;
+    justify-content: space-between;    
+    @media (min-width: 768px) { 
+        padding: 0px 152px;
+    }
+}
+
+.toggle-button{
+    display: flex;
+    @media (min-width: 1280px) {
+        display: none;
+    }
+}
+
+.side-menu {
+    overflow-y: auto; 
+    position: fixed; 
+    top: 0; 
+    bottom: 0; 
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem; 
+    padding-left: 1.5rem;
+    padding-right: 1.5rem; 
+    border-right-width: 1px; 
+    width: 100%;
+    transition-duration: 500ms; 
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); 
+    background: #504136;
+    display: flex;
+    flex-direction: column;
+
+    left: 0;
+
+}
+
+@media (min-width: 768px) {
+    .side-menu{
+        width: 24rem;
+    }
+}
+
+@media (min-width: 1280px) {
+    .side-menu{
+        display: none;
+    }
+}
+
+.mobile-logo-container{
+    display: flex; 
+    margin-bottom: 2rem; 
+    justify-content: center; 
+    color: #ffffff; 
+}
+
+.socials-logo{
+    margin-left: 0.75rem;
+    margin-right: 0.75rem; 
+    height: 2.5rem; 
+    font-size: 2.25rem;
+    line-height: 2.5rem; 
+}
+
+.nav-link{
+    display: block; 
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem; 
+    align-self: center; 
+    border-radius: 9999px; 
+    width: 100%; 
+    font-weight: 700; 
+    color: #EFF1ED;
+}
+
+.nav-link:hover {
+    color: #ffffff; 
+    background: #1A412E;
+}
+
+.nav-links{
+    display: none; 
+    flex-wrap: nowrap; 
+    text-align: center;
+
+    @media (min-width: 1280px) { 
+        display: flex; 
+    }
+}
+
+
+
+.mobile-nav-links{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    flex-wrap: nowrap;
+}
+
+.mobile-nav-links .nav-link{
+    margin:0.75rem 0rem;
+}
+
+.nav-link-container{
+    width: 0;
+    align-items: center;
+
+    @media (min-width:1280px) {
+        width: 60%;
+        align-items: center;
+    }
+}
+
+.nav-icon-container{
+    align-items: center;
+    color: white;
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    justify-content: center;
+
+    @media (min-width:1280px) {
+        width: 30%;
+        justify-content: start;
+    }
+}
