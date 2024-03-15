@@ -61,7 +61,7 @@ function BasicState(){
   return (
     <div className=" flex flex-col justify-center"> 
       <h1 className="self-center text-3xl">{greeting.greet}</h1> 
-      <button onClick={updateGreeting} className="max-w-32 self-center">Update greeting</button> 
+      <button onClick={updateGreeting} className="self-center">Update greeting</button> 
     </div> 
   )
 

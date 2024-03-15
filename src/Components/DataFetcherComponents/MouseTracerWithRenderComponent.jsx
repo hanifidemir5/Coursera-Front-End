@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import "../../assets/css/mousetrackercss.css"
 
 const MousePosition = ({ render }) => {
   const [mousePosition, setMousePosition] = useState({
@@ -30,11 +31,11 @@ const MousePosition = ({ render }) => {
 const PanelMouseLogger = () => {
   // The below if statement can be removed after the render props pattern is implemented
   return (
-    <div className="flex flex-col text-2xl h-3/6 w-4/6 justify-between space-y-4 border-[0.25rem] border-black p-4">
+    <div className="mousetracker-first-child-container">
         <p>Mouse position:</p>
         <MousePosition 
             render={({mousePosition}) => (
-                <div className="flex flex-row justify-between align-middle text-center">
+                <div className="mouse-position-container">
                     <span className="p-2 m-2">x: {mousePosition.x}</span>
                     <span className="p-2 m-2">y: {mousePosition.y}</span>
                 </div>
@@ -49,7 +50,7 @@ const PointMouseLogger = () => {
   // The below if statement can be removed after the render props pattern is implemented
   return (
       <MousePosition render={({mousePosition}) => (
-        <p className="text-center text-2xl p-4">
+        <p className="mini-mouse-position-container">
             ( {mousePosition.x} , {mousePosition.y} )
         </p>
         )}
@@ -59,8 +60,8 @@ const PointMouseLogger = () => {
 
 function MouseTracerWithRenderComponent() {
   return (
-    <div className="w-2/6 h-5/6 flex flex-col justify-center items-center">
-        <header className="text-3xl mb-8 text-center">Little Lemon Restaurant</header>
+    <div className="mousetracker-main-container">
+        <header className="mouse-tracker-header">Mouse Tracker With Render</header>
         <PanelMouseLogger />
         <PointMouseLogger />
     </div>

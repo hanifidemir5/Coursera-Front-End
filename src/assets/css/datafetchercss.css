@@ -1,0 +1,53 @@
+.data-fetcher-main-container{
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.dessert-container{
+    position: relative;
+    display: grid;
+    width: 320px;
+    height: 320px;
+    background-repeat: no-repeat;
+    background-position: center,center;
+    background-size: cover;
+    transition: all 0.5s ease;
+    border-width: 5px;
+    border-color: black;
+    padding: auto;
+    box-shadow: inset 0px 0px 0px 5px rgba(0, 0, 0.5); /* Border inside the element with 10px spread radius */
+}
+
+
+.dessert-container:hover{
+    scale: 1.05;
+    border-width: 0px;
+}
+
+.dessert-header{
+    font-weight: 600;
+    color: pink;
+    align-self: flex-end;
+    z-index:3;
+    font-size: 2em;
+    padding: 2rem 0.5rem;
+    background-color: rgba(0, 0, 0, 0.8); /* Background color of the header */
+    width: 100%;
+}
+
+.price{
+    font-weight: 700;
+    position: absolute;
+    bottom: 30px;
+    right: 0;
+    color: pink;
+    z-index: 4;
+    align-self: normal;
+    font-size: 2em;
+    margin-top: 0.625rem;
+    margin-right: 0.630rem;
+}
+
