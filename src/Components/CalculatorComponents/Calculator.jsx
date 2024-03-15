@@ -1,4 +1,4 @@
-import {useState,useRef} from "react"; 
+import {useState,useRef, useEffect} from "react"; 
 import "../../assets/css/calculatorcss.css"
 
 function Calculator() { 
@@ -26,7 +26,15 @@ function times(e) {
 }; 
 
 function divide(e) { 
-    if(Number(inputRef.current.value == 0)){
+
+    console.log(inputRef.current.value)
+
+    if(inputRef.current.value === ""){
+        alert("Divisor can not be null please enter a value.")
+        inputRef.current.value = null
+        focus(inputRef)
+    }
+    else if(Number(inputRef.current.value == 0)){
         alert("Divisor can not be zero please enter another nubmer.")
         inputRef.current.value = null
         focus(inputRef)

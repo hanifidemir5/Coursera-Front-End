@@ -1,7 +1,9 @@
 import { useState } from "react";
+import "../assets/css/keyscss.css"
+
 
 const ToDo = (props) => (
-    <tr className="flex space-x-2 items-center text-center">
+    <tr className="todo-table-row">
         <td>
             <label >{props.id}</label>
         </td>
@@ -20,22 +22,22 @@ export default function Keys() {
             createdAt : '23:38'
         }, {
             id: 'todo2',
-            createdAt : '23:55' 
+            createdAt : '11:55' 
         }]);
 
     const reverseOrder = () => {
         setTodos([...todos].reverse());
     }
     return (
-        <div className="flex flex-col justify-center">
+        <div>
             <table>
-                <tbody className="flex flex-col space-y-2">
+                <tbody>
                     {todos?.map((todo) => (
                         <ToDo key={todo.id} id={todo.id} createdAt={todo.createdAt}/>
                     ))}
                 </tbody>
             </table>
-            <div className="flex flex-col">
+            <div className="todo-button-container">
                     <button onClick={reverseOrder}>Reverse</button>
             </div>
         </div>

@@ -70,13 +70,13 @@ button:enabled{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     margin: 0.75rem 0.25rem;
     padding: 0.75rem;
-    transition: opacity 4s ease, scale 0.2s ease, color 3s ease, background-color 3s ease;
+    transition: opacity 1s ease, scale 0.2s ease, color 1s ease, background-color 1s ease;
 }
 
 button:disabled{
     color: black;
     background-color: rebeccapurple;
-    transition: opacity 3s ease;
+    transition: opacity 1s ease,scale 0.2s ease, color 1s ease, background-color 1s ease;
     opacity: 0.5;
 }
 

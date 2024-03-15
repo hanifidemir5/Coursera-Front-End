@@ -8,14 +8,13 @@
   }
  
   .calculator-button {
-    margin: 1rem 1rem;
     border-color: rgb(22,78,99);
     color: black;
-    border-radius: 0.75rem;
     background-color: rgb(165, 243, 252);
-    border-width: 0.25rem;
+    border-radius: 0.75rem;
+    border-width: 0.2rem;
     font-size: 20px;
-    border-radius: 5px;
+    margin: 1rem 1rem;
   }
   
   .calculator-button:hover{
@@ -85,19 +84,6 @@
   input[type=number]{
     text-align: center;
   }
-
-  textarea{
-    height: 6rem;
-    border-top-right-radius: 3rem;
-    border-bottom-left-radius: 3rem;
-    transition: border-radius 1s ease;
-    resize: none;
-  }
-  
-  textarea:focus{
-    border-radius: 0px;
-  }
-
 
   label{
     margin-left: 0.75rem;

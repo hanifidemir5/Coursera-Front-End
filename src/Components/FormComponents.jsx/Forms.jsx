@@ -1,9 +1,18 @@
 import { useState,useRef } from "react";
 import { validateEmail } from "../../Rules/Utils";
+import { useFormik } from "formik";
 import "../../assets/css/formscss.css"
-const PasswordErrorMessage = () => {
+import * as Yup from 'yup';
+
+const PasswordErrorMessage = ({props}) => {
   return (
     <p className="FieldError">Password should have at least 8 characters</p>
+  );
+};
+
+const ErrorMessage = ({children}) => {
+  return (
+    <p className="FieldError">{children}</p>
   );
 };
 
@@ -75,7 +84,7 @@ const SecondFormComponent = () => {
             className="w-full"
             />
           </div>
-          <div className="flex flex-col">
+          <div className="forms-button-container">
             <button type="submit" disabled={!name} >Submit</button>
           </div>
         </fieldset>
@@ -123,12 +132,12 @@ const ThirdFormComponent = ({onSubmit}) => {
             <textarea 
               name="comment"
               placeholder={textAreaPlaceHolder} 
-              className="w-full min-h-20 p-2" 
+              className="form-textarea" 
               value={comment} 
               onChange={e =>setComment(e.target.value)}
             />
           </div>
-          <div className="flex flex-col">
+          <div className="forms-button-container">
             <button type="submit" disabled={isDisabled}>Submit</button>
           </div>
         </fieldset>
@@ -143,65 +152,114 @@ const FourthFormComponent = () =>{
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
+  const [role, setRole] = useState("role");
+
+  const formik = useFormik({
+    initialValues:{
+      firstName:"",
+      lastName:"",
+      email:"",
+      password:"",
+      confirmPassword:"",
+      role:"Role",
+    },
+    onSubmit:() => {
+      formik.resetForm();        
+    },
+    validationSchema: Yup.object({
+      firstName: Yup.string()
+      .required("Required"),
+      email: Yup.string()
+      .email("Invalid email address")
+      .required("Required"),
+      password: Yup.string()
+      .required("Required").matches(
+        /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*\W)(?!.* ).{8,16}$/,
+        'Must contain at least 12 Characters, 1 Uppercase, 1 Lowercase, 1 Special Character, and 1 Number'
+      ),
+      confirmPassword: Yup.string()
+      .oneOf([Yup.ref("password")],'Passwords must match!!')
+    })
+    
+  })
 
   const [password, setPassword] = useState({
     value: "",
     isTouched: false,
   }); 
 
-  const [secondPassword, setSecondPassword] = useState({
+  const [confirmPassword, setConfirmPassword] = useState({
     value: "",
     isTouched: false,
   });
 
-  const [role, setRole] = useState("role");
-
-  const getIsFormValid = () => {
-    return (
-      firstName &&
-      validateEmail(email) &&
-      password.value.length >= 8 &&
-      role != "role"
-    );
-  };
-
-  const clearForm = () => {
-    setFirstName("");
-    setLastName("");
-    setEmail("");
-    setPassword({
-        value : "",
-        isTouched : false,
-      });
-    setRole("role")
-  };
-
   const handleSubmit = (e) => {
     e.preventDefault()
     alert("Account created!");
-    clearForm();
+    formik.resetForm();
   };
+
+  const handleFocus = (fieldName) => {
+    formik.setFieldTouched(fieldName,true,false);
+  }
 
   return (
       <div className="form-item">
         <form onSubmit={handleSubmit}>
           <fieldset>
-            <h2 className="my-6 text-3xl text-center">Sign Up</h2>
+            <h2 className="fourth-form-header">Sign Up</h2>
             <div className="Field">
               <label>
                 First name: <sup>*</sup>
               </label>
-              <input type="text" value={firstName} onChange={e => setFirstName(e.target.value)} placeholder="First name" />
+              <input 
+                type="text" 
+                value={firstName} 
+                onChange={e => setFirstName(e.target.value)} 
+                onBlur={formik.handleBlur}
+                placeholder="First name" 
+                {...formik.getFieldProps('firstName')}
+              />
             </div>
+            {
+              formik.touched.firstName && formik.errors.firstName
+              ? 
+              ( 
+                <ErrorMessage>{formik.errors.firstName}</ErrorMessage>
+              )
+              : null
+            }
             <div className="Field">
-              <label>Last name: </label> <sup>*</sup>
-              <input type="text" value={lastName} onChange={e => setLastName(e.target.value)} placeholder="Last name" />
+              <label>Last name: </label>
+              <input 
+                type="text" 
+                value={lastName} 
+                onChange={e => setLastName(e.target.value)} 
+                placeholder="Last name" 
+                {...formik.getFieldProps("lastName")}
+              />
             </div>
             <div className="Field">
               <label>
                 Email address: <sup>*</sup>
               </label>
-              <input type="text" value={email} onChange={e => setEmail(e.target.value)} placeholder="Email address" />
+              <input 
+                type="text" 
+                value={email} 
+                onChange={e => setEmail(e.target.value)} 
+                placeholder="Email address" 
+                onFocus={() => handleFocus('email')}
+                onBlur={formik.handleBlur}
+                {...formik.getFieldProps("email")}
+              />
+              {
+                formik.errors.email && formik.touched.email
+                ? 
+                ( 
+                  <ErrorMessage>{formik.errors.email}</ErrorMessage>
+                )
+                : null
+              }
             </div>
             <div className="Field">
               <label>
@@ -215,29 +273,33 @@ const FourthFormComponent = () =>{
                 onBlur={() => {
                   setPassword({...password, isTouched : true})
                 }}
+                {...formik.getFieldProps("password")}
                 placeholder="Password" type="password" 
+                onFocus={() => handleFocus('password')}
               />
                 {
-                  password.isTouched && password.value.length < 8 ? (
-                    <PasswordErrorMessage/>
+                  formik.errors.password && formik.touched.password ? (
+                    <ErrorMessage>{formik.errors.password}</ErrorMessage>
                   ) : null
                 }
               <label>
                 Second Password: <sup>*</sup>
               </label>
               <input 
-                value={secondPassword.value} 
+                value={confirmPassword.value} 
                 onChange={(e) => {
-                  setSecondPassword({...secondPassword, value : e.target.value});
+                  setConfirmPassword({...confirmPassword, value : e.target.value});
                 }}
                 onBlur={() => {
-                  setSecondPassword({...secondPassword, isTouched : true})
+                  setConfirmPassword({...confirmPassword, isTouched : true})
                 }}
-                placeholder="Password" type="password" 
+                {...formik.getFieldProps("confirmPassword")}
+                placeholder="Confirm password" type="password" 
+                onFocus={() => handleFocus('confirmPassword')}
               />
                 {
-                  secondPassword.value.length < 8 ? (
-                    <PasswordStatusMessage length = {secondPassword.value.length} />
+                  formik.errors.confirmPassword && formik.touched.confirmPassword ? (
+                    <ErrorMessage>{formik.errors.confirmPassword}</ErrorMessage>
                   ) : null
                 }
             </div>
@@ -245,14 +307,18 @@ const FourthFormComponent = () =>{
                 Role: <sup>*</sup>
               </label>
             <div className="select-field">
-              <select value={role} onChange={(e) => setRole(e.target.value)}>
+              <select 
+                value={role} 
+                onChange={(e) => setRole(e.target.value)}
+                {...formik.getFieldProps("role")}
+              >
                 <option value="role">Role</option>
                 <option value="individual">Individual</option>
                 <option value="business">Business</option>
               </select>
             </div>
-            <div className="flex flex-col">
-              <button type="submit" disabled={!getIsFormValid()}>
+            <div className="forms-button-container">
+              <button type="submit" disabled={!formik.isValid}>
                 Create account
               </button>
             </div>
@@ -268,10 +334,14 @@ export default function Forms() {
     }
     return ( 
       <div className="form-container">
-        <FirstFormComponent/>
+       <div>
         <FourthFormComponent/>
-        <ThirdFormComponent onSubmit={handleSubmit}/>
+       </div>
+        <div>
+          <ThirdFormComponent onSubmit={handleSubmit}/>
+          <FirstFormComponent/>
         <SecondFormComponent/>
+        </div>
       </div>
     ); 
 }
