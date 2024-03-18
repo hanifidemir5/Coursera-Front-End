@@ -60,7 +60,7 @@ button{
     background-color: black;
     color: rebeccapurple;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    margin: 0.75rem 0.25rem;
+    margin: 0.75rem 1rem;
     padding: 0.75rem;
 }
 
@@ -68,7 +68,6 @@ button:enabled{
     background-color: black;
     color: rebeccapurple;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    margin: 0.75rem 0.25rem;
     padding: 0.75rem;
     transition: opacity 1s ease, scale 0.2s ease, color 1s ease, background-color 1s ease;
 }

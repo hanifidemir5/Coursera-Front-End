@@ -28,11 +28,13 @@ const NavItem = ({data}) => {
                 {data.text}
                 { isOpen && data.subRoutes && data.subRoutes.length > 0 && (
                 <div className="sub-routes">
-                    {data.subRoutes.map((route, index) => (
-                        <Link key={index} to={route.to}>
-                            {route.title}
-                        </Link>
-                    ))}
+                    {
+                        data.subRoutes.map((route, index) => (
+                            <Link key={index} to={route.to}>
+                                {route.title}
+                            </Link>
+                        ))
+                    }
                 </div>
                 )}
             </Link>

@@ -15,79 +15,79 @@ export var navDatas = [
             },
             {
                 title : "Routes",
-                to: "routes",
+                to: "/routes",
             },
             {
                 title : "Audio",
-                to: "audio",
+                to: "/audio",
             },
             {
                 title : "Map",
-                to: "map",
+                to: "/map",
             },
             {
                 title : "Keys",
-                to: "keys",
+                to: "/keys",
             },
             {
                 title : "Forms",
-                to: "forms",
+                to: "/forms",
             },
             {
                 title : "Mouse Tracker",
-                to: "mouseTracker",
+                to: "/mouseTracker",
             },
             {
                 title : "Mouse Tracker With Render",
-                to: "mouseTrackerWithRender",
+                to: "/mouseTrackerWithRender",
             },
             {
                 title : "State",
-                to: "state",
+                to: "/state",
             },
             {
                 title : "Login Component",
-                to: "loginComponent",
+                to: "/loginComponent",
             },
             {
                 title : "Radio Group",
-                to: "RadioGroup",
+                to: "/RadioGroup",
             },
             {
                 title : "Gift",
-                to: "gift",
+                to: "/gift",
             },
             {
                 title : "Fetch",
-                to: "fetch",
+                to: "/fetch",
             },
             {
                 title : "Live Orders",
-                to: "liveOrders",
+                to: "/liveOrders",
             },
             {
                 title : "Data Fetcher",
-                to: "dataFetcher",
+                to: "/dataFetcher",
             },
             {
                 title : "Component Composition",
-                to: "componentComposition",
+                to: "/componentComposition",
             },
             {
                 title : "Custom Hook",
-                to: "customHook",
+                to: "/customHook",
             },
             {
                 title : "Use Reducer",
-                to: "useReducer",
+                to: "/useReducer",
             },
             {
                 title : "Context",
-                to: "context",
+                to: "/context",
             },
             {
                 title : "Calculator",
-                to: "calculator",
+                to: "/calculator",
             },
 
         ]
