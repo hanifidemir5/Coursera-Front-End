@@ -22,13 +22,34 @@ const DataFetcher =  ({render,url}) => {
                     price: "$2.99"
                 },
                 {
-                    title:"brownie",
+                    title:"Brownie",
                     image:"brownie.png",
                     price: "$3.99"
                 },
             ]);
         } else if(url.includes("drinks")) {
-            setData(["coffe","tea","milkshake"]);
+            setData([
+                {
+                    title:"Coffee",
+                    image:"coffee.jpg",
+                    price: "$0.99"
+                },
+                {
+                    title:"Çay",
+                    image:"çay.jpg",
+                    price: "$1.99"
+                },
+                {
+                    title:"Milkshake",
+                    image:"milkshake.png",
+                    price: "$2.99"
+                },
+                {
+                    title:"Coca Cola",
+                    image:"coca-cola.jpg",
+                    price: "$3.99"
+                },
+            ]);
         }
     },[]);
     console.log(data)
@@ -45,7 +66,7 @@ const DessertsCount = () => {
                     return (
                         <div className="dessert-container" style={{backgroundImage:`url(${item.image})`}}>
                             <h3 className="dessert-header">{item.title}</h3>
-                            <span className="price">{item.price}</span>
+                            <p className="price">{item.price}</p>
                         </div>
                     )})}
             </div>} 
@@ -58,10 +79,14 @@ const DrinksCount = () => {
         <DataFetcher 
             url="http://localhost:5173/drinks"
             render={(data) => 
-            <div className="flex gap-4 self-center justify-center items-center h-3/6">
+            <div className="data-fetcher-main-container">
                 {data.map((item) => {
-                    return <h3>{item}</h3>
-                })}
+                     return (
+                        <div className="dessert-container" style={{backgroundImage:`url(${item.image})`}}>
+                            <h3 className="dessert-header">{item.title}</h3>
+                            <p className="price">{item.price}</p>
+                        </div>
+                    )})}
             </div>} 
         />
     )
@@ -69,9 +94,11 @@ const DrinksCount = () => {
 
 export default function DataFetcherComponent() {
     return (
-        <div className="w-full h-full">
-            <header className="text-center text-3xl">Little Lemon Restaurant</header>
+        <div className="w-full h-full gap-24">
+            <header className="text-center text-3xl mb-12 mt-4">Little Lemon Restaurant</header>
+            <header className="text-center text-2xl mb-12">Desserts</header>
             <DessertsCount/>
+            <header className="text-center text-2xl mb-12">Drinks</header>
             <DrinksCount/>
         </div>
     );
