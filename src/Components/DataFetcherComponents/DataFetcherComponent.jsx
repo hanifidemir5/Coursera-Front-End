@@ -61,7 +61,7 @@ const DessertsCount = () => {
         <DataFetcher 
             url="http://localhost:5173/desserts" 
             render={(data) => 
-            <div className="data-fetcher-main-container">
+            <div className="data-fetcher-category-container">
                 {data.map((item) => {
                     return (
                         <div className="dessert-container" style={{backgroundImage:`url(${item.image})`}}>
@@ -79,7 +79,7 @@ const DrinksCount = () => {
         <DataFetcher 
             url="http://localhost:5173/drinks"
             render={(data) => 
-            <div className="data-fetcher-main-container">
+            <div className="data-fetcher-category-container">
                 {data.map((item) => {
                      return (
                         <div className="dessert-container" style={{backgroundImage:`url(${item.image})`}}>
@@ -94,11 +94,11 @@ const DrinksCount = () => {
 
 export default function DataFetcherComponent() {
     return (
-        <div className="w-full h-full gap-24">
-            <header className="text-center text-3xl mb-12 mt-4">Little Lemon Restaurant</header>
-            <header className="text-center text-2xl mb-12">Desserts</header>
+        <div className="data-fetcher-main-container">
+            <header className="restaurant-header">Little Lemon Restaurant</header>
+            <header className="category-header">Desserts</header>
             <DessertsCount/>
-            <header className="text-center text-2xl mb-12">Drinks</header>
+            <header className="category-header">Drinks</header>
             <DrinksCount/>
         </div>
     );

@@ -1,4 +1,4 @@
-.data-fetcher-main-container{
+.data-fetcher-category-container{
     width: 100%;
     display: flex;
     gap: 5rem;
@@ -121,3 +121,22 @@
     transform: translateZ(0px);
 }
 
+.restaurant-header{
+    text-align: center;
+    margin-bottom: 3rem;
+    margin-top: 1rem;
+    font-size: 1.875;
+    line-height: 2.25;
+}
+
+.category-header{
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+
+.data-fetcher-main-container{
+    height: 100%;
+    width: 100%;
+}
