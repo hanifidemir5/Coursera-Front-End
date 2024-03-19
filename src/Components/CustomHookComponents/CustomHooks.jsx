@@ -33,25 +33,21 @@ function CustomHooks() {
 
  
   return ( 
-    <>
-      <div className="w-1/2 flex flex-col items-center "> 
-        <h1>Count: {count}</h1> 
-        <button onClick={increment} className="mt-8 ">Plus 1</button> 
-      </div> 
-      <div className="px-4 w-1/2 flex flex-col items-center text-center ">
+    <div className="flex flex-col align-middle justify-center text-center items-center">
+        <h1 className="text-2xl">Count: {count}</h1> 
+        <button onClick={increment} className="my-8 ">Plus 1</button> 
         <h1 className="text-2xl">
           Today is: {day}<br />
           {
             prevDay && (
-              <span className="text-2xl">Previous work day was: {prevDay}</span>
+              <span>Previous work day was: {prevDay}</span>
             )
           }
         </h1>
-        <button onClick={getNextDay} style={ `${!prevDay ? "mt-8" : "mt-0"}`}>
+        <button onClick={getNextDay} className={ `${!prevDay ? "mt-12" : "mt-4"}`}>
           Get next day
         </button>
-      </div>
-    </>
+    </div>
   ); 
 } 
  

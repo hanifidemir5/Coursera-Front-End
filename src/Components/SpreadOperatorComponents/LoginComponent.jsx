@@ -34,9 +34,9 @@ const LoginButton = ({type,children, ...buttonProps}) => {
 
 export default function LoginComponent(){
     return (
-        <div className="text-center">
+        <div className="text-center w-full h-full">
             <header className="text-3xl mb-4">Little Lemon Restaurant</header>
-            <div className=" flex items-center h-[25rem] ">
+            <div className=" flex items-center h-[25rem] flex-wrap w-full  justify-center">
                 <Button type="primary" onClick={() => alert("You are ours now PEASANT!!!")}>
                     Become ours
                 </Button>

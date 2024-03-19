@@ -61,7 +61,11 @@ const Logos = () =>  {
                     key={data.url} 
                     to={`${data.url}`} 
                     className="socials-logo"
-                    target="blank"
+                    target = {
+                        data.url == "/routes" 
+                        ?  null
+                        : "blank"
+                    }
                 >
                    <FontAwesomeIcon icon={data.icon} /> 
                 </Link>
@@ -111,25 +115,26 @@ const Navbar = () => {
         setNav(!nav)
     }
     return (
-        <>
-        <div className="main-container">
-            <Logos/>
-            <NavItemList/>
-            <div onClick={handleNav} className='toggle-button'>
-            {nav ? <AiOutlineClose size={20}/> : <AiOutlineMenu size={20} /> }
-            </div>
-        </div>
-        <div className='side-menu' style={ nav ? {left:"0"}: {left:"-100%"} }>
-            <div className="mobile-logo-container">
-                <MobileLogos/>  
-                <div onClick={handleNav} className='md:hidden absolute top-8 right-10'>
-                    {nav ? <AiOutlineClose size={20}/> : <AiOutlineMenu size={20} /> }
+      <div className='w-full bg-[#504136]'>
+        <div className='flex justify-center'>
+            <div className="main-container">
+                <Logos/>
+                <NavItemList/>
+                <div onClick={handleNav} className='toggle-button'>
+                {nav ? <AiOutlineClose size={20}/> : <AiOutlineMenu size={20} /> }
                 </div>
             </div>
-            <MobileNavItem/>
+            <div className='side-menu' style={ nav ? {left:"0"}: {left:"-100%"} }>
+                <div className="mobile-logo-container">
+                    <MobileLogos/>  
+                    <div onClick={handleNav} className='md:hidden absolute top-8 right-10'>
+                        {nav ? <AiOutlineClose size={20}/> : <AiOutlineMenu size={20} /> }
+                    </div>
+                </div>
+                <MobileNavItem/>
+            </div>
         </div>
-        </>
-            
+      </div>
     );
 };
 

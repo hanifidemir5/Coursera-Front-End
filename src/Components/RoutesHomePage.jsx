@@ -24,7 +24,7 @@ export default function RoutesHomePage(){
   }
 
   return (
-    <div className='w-4/6 h-full'>
+    <div className='w-full lg:w-4/6 h-full'>
       <BasicTable subRoutes={subRoutesFromData}/>
     </div>
     // <div className='w-full h-full'>
@@ -84,7 +84,9 @@ const BasicTable = ({subRoutes}) => {
               sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
             >
               <TableCell component="th" scope="row" >
-                {route.title}
+                <Link to={route.to}>
+                  {route.title}
+                </Link>
               </TableCell>
               <TableCell >
                 {route.about}

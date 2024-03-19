@@ -3,7 +3,7 @@ import { UserProvider, useUser } from "./UserContext";
 const LoggedInUser = () =>{
     const {user} = useUser();
     return(
-        <p className="self-end absolute right-20 items-center sm:right-40">
+        <p className="self-end absolute right-5 items-center sm:right-40">
             Hello {user.name}<span></span>
         </p>
     );
@@ -44,7 +44,7 @@ function ContextPageContent(){
 function UserBlogComponent () {
     return (
         <>
-            <div className="flex flex-col w-4/6">
+            <div className="flex flex-col w-full md:w-4/6  h-full">
                 <Header/>
                 <ContextPageContent/>
             </div>

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import ReactPlayer from "react-player";
 
 function ConditionalRendering() {
     const [value,setValue] = useState(null);
@@ -12,8 +13,10 @@ function ConditionalRendering() {
         setClikced(true)
     }
 
+    const nyanCat = "https://www.youtube.com/watch?v=jIQ6UV2onyI"
+    const sadCat = "https://www.youtube.com/shorts/Kawm6M82Rv0"
     return (
-        <div className="flex flex-col items-center">
+        <div className="flex flex-col align-middle h-full w-full items-center h-full">
             <h1 style={{fontSize:"3rem"}}>Conditional Rendering Page</h1>
             {
                 !clikced && (
@@ -28,13 +31,23 @@ function ConditionalRendering() {
                 value 
                 ?   (
                         <div className="flex flex-col items-center">
-                            <img src="happycat.png" alt="happycat" style={{height:"15rem"}} />
+                            <ReactPlayer
+                                url={nyanCat} 
+                                volume={0.3}
+                                playing={true}
+                                style={{height:"15rem"}}
+                            />
                             <h1 style={{fontSize:"2rem",padding:"1rem"}}>Yeeey something meaningfull.</h1>
                         </div>
                     )
                 :   (
-                        <div>
-                            <img src="sadcatcover.jpg" alt="sadcat" style={{height:"15rem"}} />
+                        <div className="flex flex-col items-center">
+                            <ReactPlayer
+                                url={sadCat} 
+                                volume={0.3}
+                                playing={true}
+                                style={{height:"15rem"}}
+                            />                            
                             <h1 style={{fontSize:"2rem",padding:"1rem"}}>Empty input just as my soul...</h1>
                         </div>
                     )

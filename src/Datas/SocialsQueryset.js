@@ -1,8 +1,12 @@
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope, faHome } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";    
 
 export var socialDataSet = [
+    {
+      icon: faHome,
+      url: "/routes",
+    },
     {
       icon: faGithub,
       url: "https://github.com/hanifidemir5",
