@@ -47,7 +47,7 @@ function CustomHooks() {
             )
           }
         </h1>
-        <button onClick={getNextDay} className={ `${!prevDay ? "mt-8" : "mt-0"}`}>
+        <button onClick={getNextDay} style={ `${!prevDay ? "mt-8" : "mt-0"}`}>
           Get next day
         </button>
       </div>

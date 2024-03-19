@@ -15,6 +15,15 @@ function ConditionalRendering() {
     return (
         <div className="flex flex-col items-center">
             <h1 style={{fontSize:"3rem"}}>Conditional Rendering Page</h1>
+            {
+                !clikced && (
+                    <>
+                        <p className="pb-2">When you click "Begin" a pop-up will be displayed. </p>
+                        <p className="pb-2">You can either type an input or quit with "Esc" key or with clicking cancel button.</p>
+                        <p className="pb-2">The output changes based on the interactivity with the pop-up.</p>
+                    </>
+                )
+            }
             {clikced && (
                 value 
                 ?   (

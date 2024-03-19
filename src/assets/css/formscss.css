@@ -30,6 +30,17 @@
     text-decoration-line: underline;
 }
 
+.FieldErrorNull{
+    color: rgb(147, 51, 234);
+    font-weight: bold;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    bottom: -0.75rem;
+    margin: 0rem 1rem ;
+    text-decoration-line: underline;
+    opacity: 0;
+}
+
 .first-form-element{
     display: flex;
     flex-direction: column;

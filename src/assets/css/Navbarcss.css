@@ -8,6 +8,7 @@
     padding: 0px 50px;
     transition: all;
     justify-content: space-between;   
+    z-index: 9999999;
      
     @media (min-width: 768px) { 
         padding: 0px 152px;
@@ -37,7 +38,7 @@
     background: #504136;
     display: flex;
     flex-direction: column;
-
+    z-index: 9999;
     left: 0;
 
 }

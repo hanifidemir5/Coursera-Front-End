@@ -1,4 +1,4 @@
-import { useState,useRef } from "react";
+import { useState,useRef, useEffect } from "react";
 import { validateEmail } from "../../Rules/Utils";
 import { useFormik } from "formik";
 import "../../assets/css/formscss.css"
@@ -154,6 +154,16 @@ const FourthFormComponent = () =>{
   const [email, setEmail] = useState("");
   const [role, setRole] = useState("role");
 
+  const [password, setPassword] = useState({
+    value: "",
+    isTouched: false,
+  }); 
+
+  const [confirmPassword, setConfirmPassword] = useState({
+    value: "",
+    isTouched: false,
+  });
+
   const formik = useFormik({
     initialValues:{
       firstName:"",
@@ -178,20 +188,11 @@ const FourthFormComponent = () =>{
         'Must contain at least 12 Characters, 1 Uppercase, 1 Lowercase, 1 Special Character, and 1 Number'
       ),
       confirmPassword: Yup.string()
+      .required('Required')
       .oneOf([Yup.ref("password")],'Passwords must match!!')
     })
     
   })
-
-  const [password, setPassword] = useState({
-    value: "",
-    isTouched: false,
-  }); 
-
-  const [confirmPassword, setConfirmPassword] = useState({
-    value: "",
-    isTouched: false,
-  });
 
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -202,6 +203,10 @@ const FourthFormComponent = () =>{
   const handleFocus = (fieldName) => {
     formik.setFieldTouched(fieldName,true,false);
   }
+
+  useEffect(() => {
+        formik.setFieldError('isValid', false);
+  },[])
 
   return (
       <div className="form-item">

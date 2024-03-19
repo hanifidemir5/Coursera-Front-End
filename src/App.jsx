@@ -4,12 +4,7 @@ import Video from './Components/Video'
 import ConditionalRendering from './Components/ConditionalRendering'
 import Navbar from './Components/NavbarComponents/Navbar'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import RoutesHomePage from './RoutesComponents/RoutesHomePage'
-import FirstRoute from './RoutesComponents/ChildRouteComponents/FirstRoute'
-import SecondRoute from './RoutesComponents/ChildRouteComponents/SecondRoute'
-import ThirdRoute from './RoutesComponents/ChildRouteComponents/ThirdRoute'
 import AudioPractice from './Components/AudioPractice'
-import MapFunction from './Components/MapFunction'
 import Keys from './Components/Keys'
 import Forms from './Components/FormComponents.jsx/Forms'
 import { UserProvider } from './Components/ContextComponents/UserContext'
@@ -27,6 +22,8 @@ import LoginComponent from './Components/SpreadOperatorComponents/LoginComponent
 import MouseTracker from './Components/MouseTrackerComponents/MouseTracker'
 import DataFetcherComponent from './Components/DataFetcherComponents/DataFetcherComponent'
 import MouseTracerWithRenderComponent from './Components/DataFetcherComponents/MouseTracerWithRenderComponent'
+import MapFunction from './Components/MapFunction'
+import RoutesHomePage from './Components/RoutesHomePage'
 
 const desserts = [
   {
@@ -64,9 +61,6 @@ function App() {
               <Route element={<Image/>} path='/image' />
               <Route element={<ConditionalRendering/>} path='/conditionalrendering' />
               <Route element={<RoutesHomePage/>} path='/routes' />
-              <Route element={<FirstRoute/>} path='/routes/first'></Route>
-              <Route element={<SecondRoute/>} path='/routes/second'></Route>
-              <Route element={<ThirdRoute/>} path='/routes/third'></Route>
               <Route element={<AudioPractice/>} path='/audio'></Route>
               <Route element={<MapFunction desserts = {desserts}/>} path='/map'></Route>
               <Route element={<Keys/>} path='/keys'></Route>

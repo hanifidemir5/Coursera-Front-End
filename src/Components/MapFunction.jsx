@@ -1,8 +1,8 @@
-  
-import { Link } from 'react-router-dom';
-import { navDatas } from '../Datas/NavbarQueryset.js';
+import React from 'react'
+import { Link } from 'react-router-dom'
+import "../assets/css/routes.css"
 
-export default function MapFunction({desserts}){
+export default function MapFunction({desserts}) {
   const lowCalorieDesserts = desserts
   .filter((dessert) =>{ return dessert.calories < 500 })
   .sort((a, b) => {return a.calories - b.calories})
@@ -16,27 +16,9 @@ export default function MapFunction({desserts}){
 
   return (
     <div>
-      <ul className="text-4xl">
-          { navDatas.map((data) => (
-            data.subRoutes 
-            ? 
-            <div key={data.text} to={data.link} className='flex gap-6 justify-center flex-wrap'>
-                  {
-                    data.subRoutes.map((route) => {
-                      return(
-                        <Link key={route.title} to={route.to} className='p-4 hover:bg-slate-300'>{route.title}</Link>
-                      )
-                    })
-                  }
-            </div>
-            :
-            <Link key={data.text} to={data.link} >
-                  {data.text}
-            </Link>
-          ))}
-      </ul>
+      <Link to="/routes/first" className='route-button'>First</Link>
+      <Link to="/routes/second" className='route-button'>Second</Link>
+      <Link to="/routes/third" className='route-button'>Third</Link>
     </div>
-    )
-};
-
-  
+  )
+}

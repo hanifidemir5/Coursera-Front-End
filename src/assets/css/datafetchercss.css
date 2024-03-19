@@ -79,7 +79,6 @@
     right: 35px;
     color: white;
     transition: ease all 0.5s;
-    z-index:4;
     font-size: 1.25em;
 }
 
@@ -90,7 +89,6 @@
     right: 25px;
     color: black;
     transition: ease all 0.5s;
-    z-index:4;
     font-size: 1.25em;
 }
 
@@ -102,7 +100,6 @@
     color: white;
     transform-style: preserve-3d;
     transition: ease all 0.5s;
-    z-index:3;
     font-size: 1.5em;
     transform: translateZ(0px);
 }
@@ -115,7 +112,6 @@
     color: white;
     transform-style: preserve-3d;
     transition: ease all 0.5s;
-    z-index:3;
     font-size: 1.25em;
     color:black;
     transform: translateZ(0px);
@@ -125,14 +121,14 @@
     text-align: center;
     margin-bottom: 3rem;
     margin-top: 1rem;
-    font-size: 1.875;
-    line-height: 2.25;
+    font-size: 2.5vw;
+    line-height: 0.833vw;
 }
 
 .category-header{
     text-align: center;
-    margin-bottom: 3rem;
-    font-size: 1.5rem;
+    margin-bottom: 2.5vw;
+    font-size: 3vw;
     line-height: 2rem;
 }
 
