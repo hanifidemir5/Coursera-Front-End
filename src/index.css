@@ -6,6 +6,36 @@ body{
     background-color: #CCB69B;
 }
 
+button{
+    border-radius: 1rem;
+    background-color: #9039db;
+    color: rgb(191 219 254);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 0.75rem 1rem;
+    padding: 0.75rem;
+    transition: opacity 1s ease, scale 0.2s ease, color 1s ease, background-color 1s ease;
+}
+
+button:enabled:hover{
+    scale: 1.10;
+}
+
+button[type="submit"]:enabled{
+    background-color: #9039db;
+    color: rgb(191 219 254);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 0.75rem;
+    transition: opacity 1s ease, scale 0.2s ease, color 1s ease, background-color 1s ease;
+}
+
+button[type="submit"]:disabled{
+    background-color:rgb(191 219 254);
+    color:  #9039db;
+    transition: opacity 1s ease,scale 0.2s ease, color 1s ease, background-color 1s ease;
+    opacity: 0.5;
+}
+
+
 .PrimaryButton{
     background-color: #41554e;
     padding: 3;
@@ -53,31 +83,4 @@ body{
 
 .tertiaryButton:hover{
     transform: rotateX(-3600deg);
-}
-
-button{
-    border-radius: 1rem;
-    color: rebeccapurple;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    margin: 0.75rem 1rem;
-    padding: 0.75rem;
-}
-
-button:enabled{
-    background-color: #9039db;
-    color: rgb(191 219 254);
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    padding: 0.75rem;
-    transition: opacity 1s ease, scale 0.2s ease, color 1s ease, background-color 1s ease;
-}
-
-button:disabled{
-    background-color:rgb(191 219 254);
-    color:  #9039db;
-    transition: opacity 1s ease,scale 0.2s ease, color 1s ease, background-color 1s ease;
-    opacity: 0.5;
-}
-
-button:enabled:hover{
-    scale: 1.10;
 }
