@@ -17,15 +17,24 @@ const NavItem = ({data}) => {
         setIsopen(false)
     }
 
+    const handleClick = () => {
+        setIsopen(false)
+    }
+
     return(
-            <Link 
-                key={data.text} 
-                to={`${data.link}`} 
-                className="nav-link"
-                style={{flex:data.flex}}
+            <div 
+                className="nav-link-div"
                 onMouseOver={mouseOverLink} onMouseLeave={mouseLeaveLink}
+                onClick={handleClick}
+                style={{flex:data.flex}}
             >
-                {data.text}
+                <Link 
+                    key={data.text} 
+                    to={`${data.link}`} 
+                    className='nav-link-child'
+                >
+                    {data.text}
+                </Link>
                 { isOpen && data.subRoutes && data.subRoutes.length > 0 && (
                 <div className="sub-routes">
                     {
@@ -37,7 +46,7 @@ const NavItem = ({data}) => {
                     }
                 </div>
                 )}
-            </Link>
+            </div>
     )
 }
 
@@ -82,7 +91,7 @@ const MobileNavItem = () => {
                     <Link 
                         key={data.id} 
                         to={`${data.link}`} 
-                        className="nav-link"
+                        className="mobile-nav-link"
                     >
                         {data.text}
                     </Link>
@@ -121,14 +130,14 @@ const Navbar = () => {
                 <Logos/>
                 <NavItemList/>
                 <div onClick={handleNav} className='toggle-button'>
-                {nav ? <AiOutlineClose size={20}/> : <AiOutlineMenu size={20} /> }
+                    {nav ? <AiOutlineClose style={{transition:"all ease 1s"}} size={35}/> : <AiOutlineMenu size={35} /> }
                 </div>
             </div>
             <div className='side-menu' style={ nav ? {left:"0"}: {left:"-100%"} }>
                 <div className="mobile-logo-container">
                     <MobileLogos/>  
-                    <div onClick={handleNav} className='md:hidden absolute top-8 right-10'>
-                        {nav ? <AiOutlineClose size={20}/> : <AiOutlineMenu size={20} /> }
+                    <div onClick={handleNav} className='mobile-toggle-button'>
+                        {nav ? <AiOutlineClose size={35}/> : <AiOutlineMenu size={35} /> }
                     </div>
                 </div>
                 <MobileNavItem/>

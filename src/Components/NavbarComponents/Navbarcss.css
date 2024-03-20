@@ -16,9 +16,32 @@
 }
 
 .toggle-button{
+    margin-top: 0.3rem;
+    margin-left: 0.5rem;
+    color: white;
     display: flex;
     @media (min-width: 1280px) {
         display: none;
+    }
+}
+
+.mobile-toggle-button{
+    margin-top: 0.3rem;
+    position: absolute;
+    right: 0.3rem;
+    color: gray;
+    display: flex;
+}
+
+@media screen and (min-width: 375px) {
+    .mobile-toggle-button{
+        right: 0.9rem;
+    }
+}
+
+@media screen and (min-width: 425px) {
+    .mobile-toggle-button{
+        right: 1.5rem;
     }
 }
 
@@ -38,7 +61,7 @@
     background: #504136;
     display: flex;
     flex-direction: column;
-    z-index: 9999;
+    z-index: 999999999;
     left: 0;
 
 }
@@ -60,6 +83,12 @@
     margin-bottom: 2rem; 
     justify-content: center; 
     color: #ffffff; 
+}
+
+@media screen and (min-width:768px) {
+    .mobile-logo-container{
+        display: none;
+    }
 }
 
 .socials-logo{
@@ -117,11 +146,41 @@
     }
 }
 
-.nav-link{
+
+.nav-link-child{
     position: relative;
     display: block; 
+    align-self: center; 
+    border-radius: 9999px; 
+    width: 100%; 
     padding-top: 0.5rem;
     padding-bottom: 0.5rem; 
+    font-weight: 700; 
+    color: #EFF1ED;
+}
+
+.mobile-nav-link{
+    position: relative;
+    display: block; 
+    align-self: center; 
+    border-radius: 9999px; 
+    width: 100%; 
+    margin: 2rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem; 
+    font-weight: 700; 
+    color: #EFF1ED;
+}
+
+.mobile-nav-link:hover {
+    color: #ffffff; 
+    background: #1A412E;
+}
+
+
+.nav-link-div{
+    position: relative;
+    display: block; 
     align-self: center; 
     border-radius: 9999px; 
     width: 100%; 
@@ -129,7 +188,7 @@
     color: #EFF1ED;
 }
 
-.nav-link:hover {
+.nav-link-div:hover {
     color: #ffffff; 
     background: #1A412E;
 }
