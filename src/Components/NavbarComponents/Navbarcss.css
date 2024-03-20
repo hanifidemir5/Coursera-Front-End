@@ -16,12 +16,28 @@
 }
 
 .toggle-button{
-    margin-top: 0.3rem;
-    margin-left: 0.5rem;
+    position: absolute;
+    top: 32px;
+    right: 0.8rem;
     color: white;
     display: flex;
-    @media (min-width: 1280px) {
+}
+
+@media screen and (min-width: 1280px) {
+    .toggle-button{
         display: none;
+    }
+}
+
+@media screen and (min-width: 425px) {
+    .toggle-button{
+        right: 2rem;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .toggle-button{
+        right: 3.5rem;
     }
 }
 
@@ -35,7 +51,7 @@
 
 @media screen and (min-width: 375px) {
     .mobile-toggle-button{
-        right: 0.9rem;
+        right: 0.8rem;
     }
 }
 

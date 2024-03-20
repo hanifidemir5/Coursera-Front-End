@@ -83,10 +83,10 @@ const Logos = () =>  {
     )
 }
 
-const MobileNavItem = () => {
+const MobileNavItem = (props) => {
     return (
         <div>
-            <ul className='mobile-nav-links'>
+            <ul className='mobile-nav-links' onClick={props.handleNav}>
                 { navDatas.map((data) =>
                     <Link 
                         key={data.id} 
@@ -123,6 +123,7 @@ const Navbar = () => {
     const handleNav = () =>{
         setNav(!nav)
     }
+
     return (
       <div className='w-full bg-[#504136]'>
         <div className='flex justify-center'>
@@ -140,7 +141,7 @@ const Navbar = () => {
                         {nav ? <AiOutlineClose size={35}/> : <AiOutlineMenu size={35} /> }
                     </div>
                 </div>
-                <MobileNavItem/>
+                <MobileNavItem nav={nav} handleNav={handleNav}/>
             </div>
         </div>
       </div>

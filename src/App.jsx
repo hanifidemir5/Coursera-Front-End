@@ -24,6 +24,7 @@ import DataFetcherComponent from './Components/DataFetcherComponents/DataFetcher
 import MouseTracerWithRenderComponent from './Components/DataFetcherComponents/MouseTracerWithRenderComponent'
 import MapFunction from './Components/MapFunction'
 import RoutesHomePage from './Components/RouteComponents/RoutesHomePage'
+import HomePage from './Components/HomePageComponents/HomePage'
 
 const desserts = [
   {
@@ -59,6 +60,7 @@ function App() {
             <Routes>  
               <Route element={<Video/>} path='/' />
               <Route element={<Image/>} path='/image' />
+              <Route element={<HomePage/>} path='/homePage' />
               <Route element={<ConditionalRendering/>} path='/conditionalrendering' />
               <Route element={<RoutesHomePage/>} path='/routes' />
               <Route element={<AudioPractice/>} path='/audio'></Route>

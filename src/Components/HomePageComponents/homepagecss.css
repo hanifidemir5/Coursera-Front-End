@@ -1,0 +1,49 @@
+.photo-container::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Background color for overlay */
+    width: 100%; /* Make the overlay cover the entire photo container */
+    height: 99%; /* Make the overlay cover the entire photo container */
+}
+
+.photo-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    background: url("aa.jpg") no-repeat 100% 90%;
+    background-size: 100% 90%;
+    text-align: center;
+    align-items: center;
+}
+
+.photo {
+    width: 200px;
+    height: 200px;
+    position: relative;
+}
+
+@media screen and (min-width: 1024px) {
+    .photo {
+        width: 1280px;
+        height: 600px;
+    }
+}
+
+.image-text-container {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 75%;
+    font-size: 2.25rem;
+    line-height: 3rem;
+}
+
+.image-text {
+    color: white;
+}
