@@ -12,7 +12,7 @@ const MyVideo = () => {
   return (
     <ReactPlayer
         url={vidUrl} 
-        volume={0.01}
+        volume={0.5}
         playing={true}
         />
   );

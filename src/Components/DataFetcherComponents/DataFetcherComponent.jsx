@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import "../../assets/css/datafetchercss.css"
+import "./datafetchercss.css"
 const DataFetcher =  ({render,url}) => {
     const [data,setData] = useState([])
 

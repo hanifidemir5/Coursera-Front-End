@@ -1,5 +1,5 @@
 import {useState,useRef, useEffect} from "react"; 
-import "../../assets/css/calculatorcss.css"
+import "./calculatorcss.css"
 
 function Calculator() { 
 const inputRef = useRef(null); 

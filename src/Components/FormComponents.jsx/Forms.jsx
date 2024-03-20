@@ -1,7 +1,7 @@
 import { useState,useRef, useEffect } from "react";
 import { validateEmail } from "../../Rules/Utils";
 import { useFormik } from "formik";
-import "../../assets/css/formscss.css"
+import "./formscss.css"
 import * as Yup from 'yup';
 
 const PasswordErrorMessage = ({props}) => {

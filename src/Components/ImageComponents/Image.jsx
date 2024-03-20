@@ -1,4 +1,4 @@
-import "../../assets/css/imagecss.css"
+import "./imagecss.css"
 
 function Workday (){
     return (

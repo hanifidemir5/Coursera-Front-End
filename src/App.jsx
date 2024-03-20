@@ -5,7 +5,7 @@ import ConditionalRendering from './Components/ConditionalRendering'
 import Navbar from './Components/NavbarComponents/Navbar'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import AudioPractice from './Components/AudioPractice'
-import Keys from './Components/Keys'
+import Keys from './Components/KeyComponents/Keys'
 import Forms from './Components/FormComponents.jsx/Forms'
 import { UserProvider } from './Components/ContextComponents/UserContext'
 import UserBlogComponent from './Components/ContextComponents/UserBlogComponent'
@@ -23,7 +23,7 @@ import MouseTracker from './Components/MouseTrackerComponents/MouseTracker'
 import DataFetcherComponent from './Components/DataFetcherComponents/DataFetcherComponent'
 import MouseTracerWithRenderComponent from './Components/DataFetcherComponents/MouseTracerWithRenderComponent'
 import MapFunction from './Components/MapFunction'
-import RoutesHomePage from './Components/RoutesHomePage'
+import RoutesHomePage from './Components/RouteComponents/RoutesHomePage'
 
 const desserts = [
   {

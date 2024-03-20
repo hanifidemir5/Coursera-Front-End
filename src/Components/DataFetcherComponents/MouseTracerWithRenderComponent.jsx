@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import "../../assets/css/mousetrackercss.css"
+import "../MouseTrackerComponents/mousetrackercss.css"
 
 const MousePosition = ({ render }) => {
   const [mousePosition, setMousePosition] = useState({

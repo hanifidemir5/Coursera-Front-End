@@ -4,7 +4,7 @@ import { navDatas } from '../../Datas/NavbarQueryset.js';
 import { socialDataSet } from "../../Datas/SocialsQueryset.js";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import "../../assets/css/Navbarcss.css"
+import "./Navbarcss.css"
 
 const NavItem = ({data}) => {
     const [isOpen, setIsopen] = useState(false);

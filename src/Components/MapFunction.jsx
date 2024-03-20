@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import "../assets/css/routes.css"
 
 export default function MapFunction({desserts}) {
   const lowCalorieDesserts = desserts

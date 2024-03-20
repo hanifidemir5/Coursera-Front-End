@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
-import "../../assets/css/mousetrackercss.css"
-
+import "./mousetrackercss.css"
 
 const withMousePosition = (WrappedComponent) => {
     return ( props) =>{
