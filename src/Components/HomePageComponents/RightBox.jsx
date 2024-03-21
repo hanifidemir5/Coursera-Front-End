@@ -12,23 +12,23 @@ export default function RightBox() {
   return (
     <div className='rigthbox-main-container'>
       <div className='flex-1 flex justify-between'>
-        <div className={ left ? `rigthbox-sub-container` : `rigthbox-sub-container open`}></div>
-        <div className={ left ? `rigthbox-sub-container-second-side` : `rigthbox-sub-container-second-side open`}></div>
+        <div className="rigthbox-sub-container first"></div>
+        <div className="rigthbox-sub-container second"></div>
       </div>
       <div className='flex-1 flex justify-between'>
-        <div style={{backgroundColor:"lemonchiffon",width:"35%"}} className='rigthbox-sub-container'></div>
-        <div style={{backgroundColor:"lightskyblue",width:"50%"}} className='rigthbox-sub-container-second-side'></div>
-        <div style={{backgroundColor:"goldenrod",width:"50%"}} className='rigthbox-sub-container-second-side'></div>
+        <div className='rigthbox-sub-container third'></div>
+        <div className='rigthbox-sub-container fourth'></div>
+        <div className='rigthbox-sub-container fifth'></div>
       </div>
       <div className='flex-1 flex justify-between'>
-        <div style={{backgroundColor:"chartreuse",width:"50%"}} className='rigthbox-sub-container'></div>
-        <div style={{backgroundColor:"red",width:"40%"}} className='rigthbox-sub-container-second-side'></div>
+        <div className='rigthbox-sub-container sixth'></div>
+        <div className='rigthbox-sub-container seventh'></div>
       </div>
       <div className='flex-1 flex justify-between'>
-        <div style={{backgroundColor:"pink",width:"80%"}} className='rigthbox-sub-container'></div>
-        <div style={{backgroundColor:"darkslategray",width:"70%"}} className='rigthbox-sub-container-second-side'></div>
-        <div style={{backgroundColor:"purple",width:"70%"}} className='rigthbox-sub-container-second-side'></div>
-        <div style={{backgroundColor:"lightgreen",width:"70%"}} className='rigthbox-sub-container-second-side'></div>
+        <div className='rigthbox-sub-container eigth'></div>
+        <div className='rigthbox-sub-container ninth'></div>
+        <div className='rigthbox-sub-container tenth'></div>
+        <div className='rigthbox-sub-container eleventh'></div>
       </div>
     </div>
   )

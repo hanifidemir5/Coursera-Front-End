@@ -16,9 +16,15 @@ export default function HomePage() {
           </div>
       </div>
       <div className='second-section-container'>
+          <div className='about-project-container text-white'>
+              <LeftBox/>
+              <RightBox/> 
+          </div>
+      </div>
+      {/* <div className='second-section-container'>
         <LeftBox/>
         <RightBox/>
-      </div>
+      </div> */}
     </>
   )
 }
