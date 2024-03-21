@@ -1,0 +1,12 @@
+.leftbox-main-container{
+    display: flex;
+    align-self: center;
+    height: 60%;
+    width: 50%;
+    flex-direction: column;
+    row-gap: 1rem;
+    padding: 1rem 0rem;
+    align-items: center;
+    vertical-align: middle;
+    justify-content: center;
+}

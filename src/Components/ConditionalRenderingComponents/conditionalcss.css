@@ -2,11 +2,19 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 80vh;
-    margin-top: 2rem;
-    gap: 1rem;
-    width: 100%;
     justify-content: center;
+    width: 100%;
+    height: 60vh;
+}
+
+.conditional-sub-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+    height: 30vh;
+    text-align: center;
+    gap: 2rem;
 }
 
 .video-container{

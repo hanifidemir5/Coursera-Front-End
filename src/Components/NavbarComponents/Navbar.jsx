@@ -125,7 +125,7 @@ const Navbar = () => {
     }
 
     return (
-      <div className='w-full bg-[#504136]'>
+      <div className='w-full '>
         <div className='flex justify-center'>
             <div className="main-container">
                 <Logos/>

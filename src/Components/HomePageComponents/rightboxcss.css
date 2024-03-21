@@ -1,0 +1,46 @@
+.rigthbox-main-container{
+    display: flex;
+    align-self: center;
+    height: 60%;
+    width: 50%;
+    flex-direction: column;
+    row-gap: 1rem;
+    border-width: 1rem;
+    border-radius: 2rem;
+    padding: 1rem 0rem;
+    border-color: black;
+}
+
+.rigthbox-sub-container{
+    border-radius: 1rem;
+    transition: all 1s ease;
+    background-color: black;
+    height: 100%;
+    width: 10%;
+    margin: 0rem 1rem;
+}
+.rigthbox-sub-container.open{
+    transition: all 1s ease;
+    background-color: black;
+    height: 100%;
+    width: 20%;
+}
+
+
+.rigthbox-sub-container-second-side{
+    border-radius: 1rem;
+    align-self: self-end;
+    transition: all 1s ease;
+    background-color: pink;
+    height: 100%;
+    width: 20%;
+    margin: 0rem 1rem;
+
+}
+
+.rigthbox-sub-container-second-side.open{
+    transition: all 1s ease;
+    background-color: indigo;
+    height: 100%;
+    width: 80%;
+}

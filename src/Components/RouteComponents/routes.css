@@ -21,6 +21,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    vertical-align: middle;
 }
 
 .routes-sub-container{
@@ -31,27 +32,28 @@
     justify-items: center; 
     vertical-align: middle;
     width: 85%;
-    margin: 2rem 0rem;
+    margin: 7rem 0rem;
     transition: all 0.5s ease;
+    height: 30%;
 }
 
 @media screen and (min-width:768px) {
     .routes-sub-container{
         width: 654px;
-        margin: 3rem 0rem;
+        margin: 8rem 0rem;
     }
 }
 
 @media screen and (min-width:1024px) {
     .routes-sub-container{
         width: 654px;
-        margin: 4rem 0rem;
+        margin: 9rem 0rem;
     }
 }
 
 @media screen and (min-width:1280px) {
     .routes-sub-container{
         width: 654px;
-        margin: 5rem 0rem;
+        margin: 8rem 0rem;
     }
 }

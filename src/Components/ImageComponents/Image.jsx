@@ -30,14 +30,14 @@ function Image() {
     } 
     return (
         <div className="main-image-container">
-            <h1 className="image-header">
-                Hello {name}
-                {day >= 1 && day <= 5 ? <Workday/>: <Weekend/>}
-            </h1>
-            <img src={"GigaDonk.png"} className="image" alt="picture of subscription" />
-            <p style={{textAlign:"center",fontStyle:"italic"}}>
-                (GigaDonk for context)
-            </p>
+                <h1 className="image-header">
+                    Hello {name}
+                    {day >= 1 && day <= 5 ? <Workday/>: <Weekend/>}
+                </h1>
+                <img src={"GigaDonk.png"} className="image" alt="picture of subscription" />
+                <p style={{textAlign:"center",fontStyle:"italic"}}>
+                    (GigaDonk for context)
+                </p>
         </div>
     )
 }

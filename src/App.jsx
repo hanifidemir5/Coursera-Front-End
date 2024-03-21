@@ -56,9 +56,9 @@ function App() {
     <Router>
         <Navbar/>
             <Routes>  
-              <Route element={<Video/>} path='/' />
+              <Route element={<Video/>} path='/video' />
               <Route element={<Image/>} path='/image' />
-              <Route element={<HomePage/>} path='/homePage' />
+              <Route element={<HomePage/>} path='/' />
               <Route element={<ConditionalRendering/>} path='/conditionalrendering' />
               <Route element={<RoutesHomePage/>} path='/routes' />
               <Route element={<AudioPractice/>} path='/audio'></Route>
