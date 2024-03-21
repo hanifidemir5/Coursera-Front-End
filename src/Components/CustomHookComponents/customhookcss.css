@@ -1,0 +1,14 @@
+.custom-hook-main-container{
+    display: flex;
+    flex-direction: column;
+    vertical-align: middle;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.custom-hook-header{
+    font-size: 1.5rem;
+    line-height: 2rem;
+}

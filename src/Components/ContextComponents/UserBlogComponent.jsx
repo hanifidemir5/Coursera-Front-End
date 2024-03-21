@@ -1,9 +1,10 @@
 import { UserProvider, useUser } from "./UserContext";
+import "./contextcss.css"
 
 const LoggedInUser = () =>{
     const {user} = useUser();
     return(
-        <p className="self-end absolute right-5 items-center sm:right-40">
+        <p className="greetings">
             Hello {user.name}<span></span>
         </p>
     );
@@ -11,8 +12,8 @@ const LoggedInUser = () =>{
 
 const Header = () => {
     return(
-        <header className="flex mb-6 items-center justify-center">
-            <h2 className="text-2xl font-bold">Blog Page</h2>
+        <header className="context-header">
+            <h2>Blog Page</h2>
             <LoggedInUser/>
         </header>
     );
@@ -22,7 +23,7 @@ function ContextPageContent(){
     const {user} = useUser();
     return(
         <div >
-            <h2 className="text-2xl font-bold">
+            <h2 className="blog-header">
                 Lorem ipsum dolor.
             </h2>
             <br />
@@ -43,12 +44,12 @@ function ContextPageContent(){
 
 function UserBlogComponent () {
     return (
-        <>
-            <div className="flex flex-col w-full md:w-4/6  h-full">
+        <div className="context-main-container">
+            <div className="context-sub-container">
                 <Header/>
                 <ContextPageContent/>
             </div>
-        </>
+        </div>
     )
 }
 

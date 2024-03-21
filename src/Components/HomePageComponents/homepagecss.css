@@ -4,34 +4,22 @@
     position: absolute;
     top: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.5); /* Background color for overlay */
-    width: 100%; /* Make the overlay cover the entire photo container */
-    height: 99%; /* Make the overlay cover the entire photo container */
+    background-color: rgba(0, 0, 0, 0.6); 
+    width: 100%;    
+    height: 100%;
 }
 
 .photo-container {
-    position: relative;
-    width: 100vw;
-    height: 100vh;
+    position: absolute;
+    width: 100%;
+    height: 50vh;
+    top: -35px;
     display: flex;
     justify-content: center;
-    background: url("aa.jpg") no-repeat 100% 90%;
-    background-size: 100% 90%;
     text-align: center;
     align-items: center;
-}
-
-.photo {
-    width: 200px;
-    height: 200px;
-    position: relative;
-}
-
-@media screen and (min-width: 1024px) {
-    .photo {
-        width: 1280px;
-        height: 600px;
-    }
+    background: url("bb.jpg") center no-repeat;
+    background-size: cover;
 }
 
 .image-text-container {
@@ -46,4 +34,34 @@
 
 .image-text {
     color: white;
+}
+
+
+@media screen and (min-width: 760px) {
+    .photo-container {
+        background: url("bb.jpg") start no-repeat;
+        height: 60vh;
+    }
+    .image-text{
+        font-size: 3rem;
+        line-height: 3.5rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .image-text{
+        font-size: 4rem;
+        line-height: 4.5rem;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .photo-container {
+        background: url("bb.jpg") start no-repeat;
+        height: 87vh;
+    }
+    .image-text{
+        font-size: 4rem;
+        line-height: 6rem;
+    }
 }

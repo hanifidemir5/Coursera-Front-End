@@ -61,9 +61,11 @@ const PointMouseLogger = () => {
 function MouseTracerWithRenderComponent() {
   return (
     <div className="mousetracker-main-container">
-        <header className="mouse-tracker-header">Mouse Tracker With Render</header>
-        <PanelMouseLogger />
-        <PointMouseLogger />
+      <div className="mousetracker-second-main-container">
+          <header className="mouse-tracker-header">Mouse Tracker With Render</header>
+          <PanelMouseLogger />
+          <PointMouseLogger />
+      </div>
     </div>
   );
 }

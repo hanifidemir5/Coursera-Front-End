@@ -1,5 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import useConsoleLog from "./useConsoleLog";
+import "./customhookcss.css"
+
 
 function usePrevious(val) {
   const ref = useRef()
@@ -33,10 +35,10 @@ function CustomHooks() {
 
  
   return ( 
-    <div className="flex flex-col align-middle justify-center text-center items-center">
-        <h1 className="text-2xl">Count: {count}</h1> 
+    <div className="custom-hook-main-container">
+        <h1 className="custom-hook-header">Count: {count}</h1> 
         <button onClick={increment} className="my-8 ">Plus 1</button> 
-        <h1 className="text-2xl">
+        <h1 className="custom-hook-header">
           Today is: {day}<br />
           {
             prevDay && (

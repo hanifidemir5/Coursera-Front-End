@@ -1,11 +1,12 @@
 import React from "react";
+
 const OrderRow =  ({children, spacing}) => {
     const childStyle = {
         marginLeft : `${spacing}px`,
     };
 
     return(
-        <div className="flex text-3xl">
+        <div className="children-text">
             {React.Children.map(children, (child,index) => {
                 return React.cloneElement(child, {
                     style: {

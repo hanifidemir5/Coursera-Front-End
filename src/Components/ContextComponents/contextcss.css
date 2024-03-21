@@ -1,0 +1,47 @@
+.context-main-container{
+    margin-top: 7rem;
+    display: flex;
+    height: 50vh;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+}
+
+.context-sub-container{
+    width: 66%;
+}
+
+.context-header{
+    display: flex;
+    margin-bottom: 1.5rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.context-header > h2{
+    font-weight: bold;
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+
+text-2xl font-bold
+
+.greetings{
+    position: absolute;
+    align-items: center;
+    right: 1.25rem;
+}
+
+@media screen and (min-width:1024px) {
+    .greetings{
+        position: absolute;
+        right: 10rem;
+    }
+}
+
+
+.blog-header{
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: bold;
+}

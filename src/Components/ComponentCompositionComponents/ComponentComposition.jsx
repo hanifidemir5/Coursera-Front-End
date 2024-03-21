@@ -1,6 +1,7 @@
 import Dialog from "@mui/material/Dialog";
 import DialogTitle from "@mui/material/DialogTitle";
 import { useState } from "react";
+import "./componentcss.css"
 
 const Button = ({children, backgroundColor}) => {
     return <button style={{ backgroundColor }}>{children}</button>;
@@ -46,13 +47,13 @@ const DeleteButton = () =>{
 
 function ComponentComposition(){
     return (
-        <div>
+        <div className="component-composition-main-container">
             <Alert >
                 <DialogTitle>Delete Account</DialogTitle>
-                <p className="p-4">
+                <p className="component-pharagraph">
                     Are you sure you want to proceed? You will miss all your delicious recipies!!
                 </p>
-                <div className="flex justify-end m-4">
+                <div className="component-button">
                     <DeleteButton />
                 </div>
             </Alert>

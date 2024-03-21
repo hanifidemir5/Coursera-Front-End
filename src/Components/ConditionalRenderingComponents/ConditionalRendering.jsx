@@ -1,5 +1,6 @@
 import { useState } from "react";
 import ReactPlayer from "react-player";
+import "./conditionalcss.css"
 
 function ConditionalRendering() {
     const [value,setValue] = useState(null);
@@ -16,7 +17,7 @@ function ConditionalRendering() {
     const nyanCat = "https://www.youtube.com/watch?v=jIQ6UV2onyI"
     const sadCat = "https://www.youtube.com/shorts/Kawm6M82Rv0"
     return (
-        <div className="flex flex-col align-middle h-full w-full items-center h-full">
+        <div className="conditional-main-container">
             <h1 style={{fontSize:"3rem"}}>Conditional Rendering Page</h1>
             {
                 !clikced && (
@@ -30,7 +31,7 @@ function ConditionalRendering() {
             {clikced && (
                 value 
                 ?   (
-                        <div className="flex flex-col items-center">
+                        <div className="video-container">
                             <ReactPlayer
                                 url={nyanCat} 
                                 volume={0.3}
@@ -41,7 +42,7 @@ function ConditionalRendering() {
                         </div>
                     )
                 :   (
-                        <div className="flex flex-col items-center">
+                        <div className="video-container">
                             <ReactPlayer
                                 url={sadCat} 
                                 volume={0.3}
@@ -52,7 +53,7 @@ function ConditionalRendering() {
                         </div>
                     )
             )}
-            <button onClick={onBegin}>
+            <button style={{marginTop:"-10px"}} onClick={onBegin}>
                 {buttonText}
             </button>
         </div>

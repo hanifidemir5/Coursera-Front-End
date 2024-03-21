@@ -1,23 +1,22 @@
 import React from 'react'
 import Image from "./Components/ImageComponents/Image"
-import Video from './Components/Video' 
-import ConditionalRendering from './Components/ConditionalRendering'
+import Video from './Components/VideoPageComponents/Video'
+import ConditionalRendering from './Components/ConditionalRenderingComponents/ConditionalRendering'
 import Navbar from './Components/NavbarComponents/Navbar'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import AudioPractice from './Components/AudioPractice'
+import AudioPractice from './Components/AudioComponents/AudioPractice'
 import Keys from './Components/KeyComponents/Keys'
 import Forms from './Components/FormComponents.jsx/Forms'
 import { UserProvider } from './Components/ContextComponents/UserContext'
 import UserBlogComponent from './Components/ContextComponents/UserBlogComponent'
-import StateUsage from './Components/StateUsage'
-import GiftCardProcess from './Components/GiftCardProcess'
-import Fetch from './Components/Fetch'
+import StateUsage from './Components/StateComponents/StateUsage'
+import GiftCardProcess from './Components/GiftCardComponents/GiftCardProcess'
+import Fetch from './Components/FetchComponents/Fetch'
 import Calculator from './Components/CalculatorComponents/Calculator'
-import UseReducerComponent from './Components/UseReducerComponent'
 import CustomHooks from './Components/CustomHookComponents/CustomHooks'
 import ComponentComposition from './Components/ComponentCompositionComponents/ComponentComposition'
 import LiveOrders from './Components/ReactChildrenAPI\'s/LiveOrders'
-import RadioGroupComponent from './Components/ReactChildrenAPI\'s/RadioGroupComponent'
+import RadioGroupComponent from './Components/RadioGroupComponents/RadioGroupComponent'
 import LoginComponent from './Components/SpreadOperatorComponents/LoginComponent'
 import MouseTracker from './Components/MouseTrackerComponents/MouseTracker'
 import DataFetcherComponent from './Components/DataFetcherComponents/DataFetcherComponent'
@@ -25,6 +24,7 @@ import MouseTracerWithRenderComponent from './Components/DataFetcherComponents/M
 import MapFunction from './Components/MapFunction'
 import RoutesHomePage from './Components/RouteComponents/RoutesHomePage'
 import HomePage from './Components/HomePageComponents/HomePage'
+import UseReducerComponent from './Components/UseReducerComponents/UseReducerComponent'
 
 const desserts = [
   {
@@ -55,8 +55,6 @@ function App() {
   return (
     <Router>
         <Navbar/>
-        <div className='flex align-middle justify-center p-8 h-[35rem]'>  
-          <div className='flex items-center justify-center h-full w-full'>
             <Routes>  
               <Route element={<Video/>} path='/' />
               <Route element={<Image/>} path='/image' />
@@ -82,8 +80,6 @@ function App() {
               <Route element={<UserProvider> <UserBlogComponent/> </UserProvider>} path='/context'></Route>
               <Route element={<Calculator/>} path='/calculator'></Route>
             </Routes>
-          </div>
-        </div>
       </Router>
   )
 }

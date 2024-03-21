@@ -1,9 +1,10 @@
 import OrderRow from "./OrderRow";
+import "./childrencss.css"
 
 export default function LiveOrders() {
     return (
         <OrderRow spacing={32}>
-            <div className="w-full h-full flex flex-wrap gap-4">
+            <div className="live-orders-container">
                 <p>Shawarma</p>
                 <p>4</p>
                 <p>45$</p>

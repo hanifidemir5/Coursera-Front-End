@@ -1,0 +1,15 @@
+.live-orders-container{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.children-text{
+    display: flex;
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+}

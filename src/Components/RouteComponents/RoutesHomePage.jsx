@@ -11,6 +11,7 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import "./routes.css"
 
 export default function RoutesHomePage(){
   var subRoutesFromData = []
@@ -24,8 +25,10 @@ export default function RoutesHomePage(){
   }
 
   return (
-    <div className='w-full lg:w-4/6 h-full'>
-      <BasicTable subRoutes={subRoutesFromData}/>
+    <div className='routes-main-container'>
+      <div className='routes-sub-container'>
+        <BasicTable subRoutes={subRoutesFromData}/>
+      </div>
     </div>
     // <div className='w-full h-full'>
     //   <ul className="text-4xl">
@@ -68,38 +71,38 @@ const rows = [
 
 const BasicTable = ({subRoutes}) => {
   return (
-    <TableContainer component={Paper}>
-      <Table sx={{ minWidth: 650 }} aria-label="simple table">
-        <TableHead>
-          <TableRow>
-            <TableCell style={{width:"300px"}}>Route Name</TableCell>
-            <TableCell  style={{width:"600px"}}>Purpose</TableCell>
-            <TableCell  style={{width:"50px"}}>Visit</TableCell>
-          </TableRow>
-        </TableHead>
-        <TableBody>
-          {subRoutes.map((route) => (
-            <TableRow
-              key={route.title}
-              sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-            >
-              <TableCell component="th" scope="row" >
-                <Link to={route.to}>
-                  {route.title}
-                </Link>
-              </TableCell>
-              <TableCell >
-                {route.about}
-              </TableCell>
-              <TableCell align='left'>
-                <Link to={route.to}>
-                  <FontAwesomeIcon icon={faArrowRight} className='p-4 bg-blue-200 rounded-xl' />
-                </Link>
-              </TableCell>
+      <TableContainer component={Paper}>
+        <Table sx={{ minWidth: 650 }} aria-label="simple table">
+          <TableHead>
+            <TableRow>
+              <TableCell style={{width:"300px"}}>Route Name</TableCell>
+              <TableCell  style={{width:"600px"}}>Purpose</TableCell>
+              <TableCell  style={{width:"50px"}}>Visit</TableCell>
             </TableRow>
-          ))}
-        </TableBody>
-      </Table>
-    </TableContainer>
+          </TableHead>
+          <TableBody>
+            {subRoutes.map((route) => (
+              <TableRow
+                key={route.title}
+                sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+              >
+                <TableCell component="th" scope="row" >
+                  <Link to={route.to}>
+                    {route.title}
+                  </Link>
+                </TableCell>
+                <TableCell >
+                  {route.about}
+                </TableCell>
+                <TableCell align='left'>
+                  <Link to={route.to}>
+                    <FontAwesomeIcon icon={faArrowRight} className='route-button' />
+                  </Link>
+                </TableCell>
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
+      </TableContainer>
   );
 }

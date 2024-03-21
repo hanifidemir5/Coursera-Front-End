@@ -1,5 +1,6 @@
 import { useRef, useState } from "react"; 
- 
+import "./statecss.css"
+
 function GoalForm(props){
   const [formData,setFormData] = useState({ goal: "", by: "" });
   const goalRef = useRef(null)
@@ -75,7 +76,7 @@ export default function StateUsage() {
   }
  
   return ( 
-    <div >
+    <div className="state-main-container">
       <div className="space-y-3 lg:min-w-[600px]">
         <BasicState/>
         <GoalForm onAdd={addGoal} />

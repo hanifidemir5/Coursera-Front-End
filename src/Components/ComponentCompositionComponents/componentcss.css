@@ -1,0 +1,16 @@
+.component-composition-main-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.component-pharagraph{
+    padding: 1rem;
+}
+
+.component-button{
+    display: flex;
+    justify-content: flex-end;
+    margin: 1rem;
+}

@@ -8,6 +8,7 @@ export const UserProvider = ({children}) => {
         email:"john@example.com",
         dob:"02/05/2001"
     });
+    
     return <UserContext.Provider value={{ user }} >{children}</UserContext.Provider>;
 }
 

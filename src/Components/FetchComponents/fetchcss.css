@@ -1,0 +1,10 @@
+.fetch-main-container{
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    justify-content: center;
+    height: 80vh;
+    align-items: center;
+    font-size: 1.875rem;
+    line-height: 2.25rem
+}

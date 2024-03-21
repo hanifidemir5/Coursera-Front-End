@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import "./audiocss.css"
 const bird1 = new Audio(
   "https://upload.wikimedia.org/wikipedia/commons/9/9b/Hydroprogne_caspia_-_Caspian_Tern_XC432679.mp3"
 );
@@ -31,7 +31,7 @@ function AudioPractice() {
   };
 
   return (
-    <div>
+    <div className="audio-main-container">
       <button onClick={toggle1}>First audio of Caspian Tern Bird</button>
       <button onClick={toggle2}>Second audio of Caspian Tern Bird</button>
     </div>

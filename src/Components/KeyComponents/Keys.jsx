@@ -29,7 +29,7 @@ export default function Keys() {
         setTodos([...todos].reverse());
     }
     return (
-        <div>
+        <div className="keys-main-container">
             <table>
                 <tbody>
                     {todos?.map((todo) => (

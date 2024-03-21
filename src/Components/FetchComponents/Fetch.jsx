@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import "./fetchcss.css"
 
 export default function     Fetch() {
     const [user,setUser] = useState([]);
@@ -15,11 +16,11 @@ export default function     Fetch() {
 
 
     return Object.keys(user).length > 0 ? (
-        <div className='text-3xl space-y-8 flex flex-col justify-center'>
+        <div className='fetch-main-container'>
             <h1>
                 Data Returned
             </h1>
-            <img src={user.results[0].picture.large} alt="profile-picture" className='rounded-full self-center'/>
+            <img src={user.results[0].picture.large} alt="profile-picture" className='rounded-lg self-center'/>
             <h2>First Name: {user.results[0].name.first}</h2>
             <h2>Last Name: {user.results[0].name.last}</h2>
         </div>

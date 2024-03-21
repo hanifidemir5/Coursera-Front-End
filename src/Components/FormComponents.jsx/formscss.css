@@ -2,13 +2,27 @@
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
     column-gap: 1.5rem;
-    height: 100%;
+    height: 80vh;
     width: 100%;
-    @media (min-width: 1280px) { 
-        width: 60%;
+    justify-content: center;
+    margin: 1.5rem auto;
+    padding: 0rem 2rem;
+}
+
+@media screen and (min-width: 1024px) { 
+    .form-container{
+        width: 85%;
         height: 100%;
     }
 }
+
+@media screen and (min-width: 1280px) { 
+    .form-container{
+        width: 70%;
+        height: 100%;
+    }
+}
+
 
 .form-item{
     align-self: center;

@@ -1,0 +1,23 @@
+.radio-group-main-container{
+    display: flex;
+    align-items: center;
+    height: 80vh;
+    justify-content: center;
+}
+
+.radio-group-sub-container{
+    padding: 1rem;
+    margin: 1rem;
+    border-width: 4px;
+    color:white;
+    background-color: #c1c2b2;
+    border-color: #6E675F;
+    border-radius: 1.5rem;
+    font-size: 1.125;
+    line-height: 1.75rem;
+}
+
+.radio-button-container{
+    display: flex;
+    justify-content: flex-end;
+}

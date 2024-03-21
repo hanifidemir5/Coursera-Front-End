@@ -119,16 +119,16 @@
 
 .restaurant-header{
     text-align: center;
-    margin-bottom: 3rem;
-    margin-top: 1rem;
-    font-size: 2.5vw;
-    line-height: 0.833vw;
+    margin-bottom: 6rem;
+    margin-top: 5rem;
+    font-size: 3rem;
+    line-height: 3rem;
 }
 
 .category-header{
     text-align: center;
-    margin-bottom: 2.5vw;
-    font-size: 3vw;
+    margin-bottom: 5rem;
+    font-size: 3rem;
     line-height: 2rem;
 }
 

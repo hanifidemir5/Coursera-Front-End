@@ -58,9 +58,11 @@ const PointMouseTracker = withMousePosition(PointMouseLogger)
 export default function MouseTracker(){
     return(
         <div className="mousetracker-main-container">
-            <header className="mouse-tracker-header">Mouse Tracker</header>
-            <PanelMouseTracker/> 
-            <PointMouseTracker/> 
+            <div className="mousetracker-second-main-container">
+                <header className="mouse-tracker-header">Mouse Tracker</header>
+                <PanelMouseTracker/> 
+                <PointMouseTracker/> 
+            </div>
         </div>
     );
 };

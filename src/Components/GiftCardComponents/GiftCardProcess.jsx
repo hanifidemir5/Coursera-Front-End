@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import "./giftcardcss.css"
 
 export default function GiftCardProcess() {
   const [giftCard, setGiftCard] = useState(
@@ -28,7 +29,7 @@ export default function GiftCardProcess() {
     }
 
   return (
-    <div style={{padding: '40px'}}>
+    <div style={{padding: '40px'}} className="gift-card-main-container">
       <h1>
         Gift Card Page
       </h1>
@@ -43,17 +44,14 @@ export default function GiftCardProcess() {
       </p>
       {
         giftCard.valid ? (
-          <div className="flex justify-end">
-            <button onClick={spendGiftCard}>
-              Spend Gift Card
-            </button>
-          </div> 
-        ) : (
-          <div className="flex justify-start">
-            <button onClick={reload}>
-              <Link to="/gift">Back</Link>
-            </button>
-          </div>
+          <button onClick={spendGiftCard}>
+            Spend Gift Card
+          </button>
+        ) 
+        : (
+          <button onClick={reload}>
+            <Link to="/gift">Back</Link>
+          </button>
         )
       }
     </div>
