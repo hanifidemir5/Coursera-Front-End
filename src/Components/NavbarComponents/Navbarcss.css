@@ -1,16 +1,15 @@
 .main-container{
     display: flex;
-    position: absolute; 
+    position: fixed; 
     align-items: center; 
     width: 100%; 
     height: 6rem; 
     max-width: 1575px;
-   
     padding: 0px 50px;
-    transition: all;
+    transition: all 0.5s ease;
     justify-content: space-between;   
     z-index: 9999999;
-     
+    
     @media (min-width: 768px) { 
         padding: 0px 152px;
     }

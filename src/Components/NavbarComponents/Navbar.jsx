@@ -1,5 +1,5 @@
 import { AiOutlineClose,AiOutlineMenu} from 'react-icons/ai'
-import { useEffect, useState } from 'react';
+import { useEffect, useState,useRef } from 'react';
 import { navDatas } from '../../Datas/NavbarQueryset.js';
 import { socialDataSet } from "../../Datas/SocialsQueryset.js";
 import { Link } from "react-router-dom";
@@ -123,11 +123,52 @@ const Navbar = () => {
     const handleNav = () =>{
         setNav(!nav)
     }
+    const [isTop,setIsTop] = useState(true)
+    const [isUpwards, setIsUpward] = useState(false)
+
+    const headerRef = useRef(null); 
+
+    useEffect(() => { 
+        let prevScrollPosition = window.scrollY; 
+        
+
+        const handleScroll = () => { 
+        const currentScrollPosition = window.scrollY;
+        const headerElement = headerRef.current; 
+
+        if(currentScrollPosition === 0){
+            setIsTop(true)
+        }
+        else
+        {
+            setIsTop(false)
+        }
+
+        console.log(currentScrollPosition)
+
+        if (!headerElement) { 
+            return; 
+        } 
+        if (prevScrollPosition > currentScrollPosition) { 
+            headerElement.style.transform = "translateY(0px)"; 
+            setIsUpward(true)
+        } else { 
+            headerElement.style.transform = "translateY(-200px)"; 
+            setIsUpward(false)
+        } 
+        prevScrollPosition = currentScrollPosition; 
+        } 
+        window.addEventListener('scroll', handleScroll) 
+    
+        return () => { 
+        window.removeEventListener('scroll', handleScroll) 
+        } 
+    }, []); 
 
     return (
-      <div className='w-full '>
+      <div className='w-full' >
         <div className='flex justify-center'>
-            <div className="main-container">
+            <div className="main-container" style={ isUpwards && !isTop ? {backgroundColor:"rebeccapurple"} : null } ref={headerRef}>
                 <Logos/>
                 <NavItemList/>
                 <div onClick={handleNav} className='toggle-button'>
