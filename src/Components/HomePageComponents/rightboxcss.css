@@ -73,119 +73,8 @@
     }
 }
 
-.rigthbox-sub-container.first:hover,
-.rigthbox-sub-container.fifth:hover,
-.rigthbox-sub-container.seventh:hover{
-    width: 70%;
-}
-
-.rigthbox-sub-container.eigth:hover,
-.rigthbox-sub-container.ninth:hover,
-.rigthbox-sub-container.tenth:hover,
-.rigthbox-sub-container.eleventh:hover{
-    width: 50%;
-}
-
-.rigthbox-sub-container.sixth:hover,
-.rigthbox-sub-container.third:hover,
-.rigthbox-sub-container.fourth:hover,
-.rigthbox-sub-container.second:hover{
-    width: 80%;
-}
-
-.rigthbox-sub-container.second:hover{
-    width: 160%
-}
-
-
-
-.rigthbox-sub-container.first{
-    width: 50%;
-    background-color: black;
-}
-
-.rigthbox-sub-container.second{
-    width: 80%;
-    background-color: indigo;
-    color: #41a492;
-}
-
-.rigthbox-sub-container.third{
-    width: 50%;
-    background-color: lemonchiffon;
-    color:black;
-}
-
-.rigthbox-sub-container.fourth{
-    width: 50%;
-    background-color: lightskyblue;
-}
-
-.rigthbox-sub-container.fifth{
-    width: 30%;
-    background-color: goldenrod;
-}
-
-.rigthbox-sub-container.sixth{
-    width: 60%;
-    background-color: chartreuse;
-}
-
-.rigthbox-sub-container.seventh{
-    width: 40%;
-    background-color: #3c3131;
-}
-
-.rigthbox-sub-container.eigth{
-    width: 25%;
-    background-color: pink;
-}
-
-.rigthbox-sub-container.ninth{
-    width: 25%;
-    background-color: darkslategray;
-}
-
-.rigthbox-sub-container.tenth{
-    width: 25%;
-    background-color: purple;
-}
-
-.rigthbox-sub-container.eleventh{
-    width: 25%;
-    background-color: lightgreen;
-}
-
-.rigthbox-main-container.third,
-.rigthbox-sub-container.fourth,
-.rigthbox-sub-container.fifth,
-.rigthbox-sub-container.eigth,
-.rigthbox-sub-container.ninth,
-.rigthbox-sub-container.tenth,
-.rigthbox-sub-container.eleventh {
-    color: black;
-}
-
-.rigthbox-sub-container.first,
-.rigthbox-sub-container.second,
-.rigthbox-sub-container.sixth,
-.rigthbox-sub-container.seventh{
-    color: #41a492;
-}
-
-
 @media screen and (min-width:780px) {
-    .rigthbox-sub-container.first,
-    .rigthbox-sub-container.fifth,
-    .rigthbox-sub-container.seventh,
-    .rigthbox-sub-container.eigth,
-    .rigthbox-sub-container.ninth,
-    .rigthbox-sub-container.tenth,
-    .rigthbox-sub-container.eleventh,
-    .rigthbox-sub-container.sixth,
-    .rigthbox-sub-container.third,
-    .rigthbox-sub-container.fourth,
-    .rigthbox-sub-container.second{
+    .rigthbox-sub-container{
         margin: 0rem 0.6rem;
         border-radius: 1rem;
     }
@@ -212,17 +101,7 @@
 }
 
 @media screen and (min-width:1280px) {
-    .rigthbox-sub-container.first,
-    .rigthbox-sub-container.fifth,
-    .rigthbox-sub-container.seventh,
-    .rigthbox-sub-container.eigth,
-    .rigthbox-sub-container.ninth,
-    .rigthbox-sub-container.tenth,
-    .rigthbox-sub-container.eleventh,
-    .rigthbox-sub-container.sixth,
-    .rigthbox-sub-container.third,
-    .rigthbox-sub-container.fourth,
-    .rigthbox-sub-container.second{
+    .rigthbox-sub-container{
         border-radius: 1.25rem;
     }
     .rigthbox-main-container{
@@ -235,17 +114,7 @@
 }
 
 @media screen and (min-width:1500px) {
-    .rigthbox-sub-container.first,
-    .rigthbox-sub-container.fifth,
-    .rigthbox-sub-container.seventh,
-    .rigthbox-sub-container.eigth,
-    .rigthbox-sub-container.ninth,
-    .rigthbox-sub-container.tenth,
-    .rigthbox-sub-container.eleventh,
-    .rigthbox-sub-container.sixth,
-    .rigthbox-sub-container.third,
-    .rigthbox-sub-container.fourth,
-    .rigthbox-sub-container.second{
+    .rigthbox-sub-container.first{
         border-radius: 1.5rem;
     }
     .rigthbox-main-container{
@@ -263,17 +132,7 @@
 }
 
 @media screen and (min-width:2100px) {
-    .rigthbox-sub-container.first,
-    .rigthbox-sub-container.fifth,
-    .rigthbox-sub-container.seventh,
-    .rigthbox-sub-container.eigth,
-    .rigthbox-sub-container.ninth,
-    .rigthbox-sub-container.tenth,
-    .rigthbox-sub-container.eleventh,
-    .rigthbox-sub-container.sixth,
-    .rigthbox-sub-container.third,
-    .rigthbox-sub-container.fourth,
-    .rigthbox-sub-container.second{
+    .rigthbox-sub-container.first{
         border-radius: 2.5rem;
         margin: 0rem 1rem;
     }

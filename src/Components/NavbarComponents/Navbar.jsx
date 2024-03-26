@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./Navbarcss.css"
 
+
 const NavItem = ({data}) => {
     const [isOpen, setIsopen] = useState(false);
 
@@ -143,8 +144,6 @@ const Navbar = () => {
         {
             setIsTop(false)
         }
-
-        console.log(currentScrollPosition)
 
         if (!headerElement) { 
             return; 
