@@ -21,7 +21,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    vertical-align: middle;
 }
 
 .routes-sub-container{
@@ -53,7 +52,13 @@
 
 @media screen and (min-width:1280px) {
     .routes-sub-container{
-        width: 654px;
+        width: 60%;
         margin: 8rem 0rem;
+    }
+}
+
+@media screen and (min-width:16000px) {
+    .routes-sub-container{
+        width: 80%;
     }
 }

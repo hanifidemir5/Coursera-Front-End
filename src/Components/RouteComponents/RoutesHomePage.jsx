@@ -12,10 +12,33 @@ import Paper from '@mui/material/Paper';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import "./routes.css"
+import { useState } from 'react';
+import { faSquareArrowUpRight } from '@fortawesome/free-solid-svg-icons';
+
+function useWindowWidth () {
+  const [width, setWidth] = useState(window.innerWidth);
+
+  React.useEffect(() =>  {
+    const handleResize = () => {
+      setWidth(window.innerWidth);
+    };
+    
+    window.addEventListener('resize',handleResize)
+    
+    return () => {
+      window.removeEventListener('resize',handleResize)
+    };
+
+  },[])
+  
+  return width;
+}
 
 export default function RoutesHomePage(){
   var subRoutesFromData = []
-  
+  const [isMobile,setIsMobile]  = React.useState(false)
+  var width = useWindowWidth();
+
   for(var i = 0; i < navDatas.length; i++){
     if(navDatas[i].subRoutes){
       for(var j = 0; j < navDatas[i].subRoutes.length; j++){
@@ -24,54 +47,56 @@ export default function RoutesHomePage(){
     }
   }
 
+
+  React.useEffect(() => {
+    if(width < 768){
+      setIsMobile(true)
+    }
+    else{
+      setIsMobile(false)
+    }
+  },[width])
+ 
+
   return (
-    <div className='routes-main-container'>
-      <div className='routes-sub-container'>
-        <BasicTable subRoutes={subRoutesFromData}/>
-      </div>
-    </div>
-    // <div className='w-full h-full'>
-    //   <ul className="text-4xl">
-    //       { navDatas.map((data) => (
-    //         data.subRoutes 
-    //         ? 
-    //         <div key={data.text} to={data.link} className='flex gap-6 justify-center flex-wrap'>
-    //               {
-    //                 data.subRoutes.map((route) => {
-    //                   return(
-    //                     <Link key={route.title} to={route.to} className='p-4 hover:bg-slate-300'>{route.title}</Link>
-    //                   )
-    //                 })
-    //               }
-    //         </div>
-    //         :
-    //         <Link key={data.text} to={data.link} >
-    //               {data.text}
-    //         </Link>
-    //       ))}
-    //   </ul>
-    // </div>
+    <>
+      {
+        !isMobile &&
+        <div className='routes-main-container'>
+          <div className='routes-sub-container'>
+            <BasicTable subRoutes={subRoutesFromData}/>
+          </div>
+        </div>
+      }
+      { 
+        isMobile &&
+        (
+          <div className='flex flex-col gap-8 justify-center mt-40'>
+            {
+              subRoutesFromData.map((routeData) => {
+                return(
+                  <div className='w-[90%] max-w-[300px] h-[220px] items-center justify-between flex flex-col rounded-b-3xl self-center bg-white'>
+                      <h1 className='bg-gray-500 text-white text-center w-full text-2xl h-10'>{routeData.title}</h1>
+                    <div className='h-full flex flex-col align-middle justify-center'>
+                      <p className='mx-8'>{routeData.about}</p>
+                    </div>
+                    <div className='h-8 flex flex-col w-full text-center justify-center'>
+                      <Link to={routeData.to}  className='cursor-pointer align-middle rounded-b-3xl italic bg-red-600'>{routeData.to} <FontAwesomeIcon icon={faSquareArrowUpRight} values={subRoutesFromData[0].to} className='text-black'/></Link>
+                    </div>
+                  </div>
+                  )
+              })
+            }
+          </div>
+        )
+      }
+    </>
     )
 };
 
-function createData(
-  name,
-  purpose
-) {
-  return { name, purpose };
-}
-
-const rows = [
-  createData('Map', 159),
-  createData('Ice cream sandwich', 237),
-  createData('Eclair', 262),
-  createData('Cupcake', 305),
-  createData('Gingerbread', 356),
-];
-
 const BasicTable = ({subRoutes}) => {
   return (
-      <TableContainer component={Paper}>
+      <TableContainer style={{backgroundColor:"#CCB69B"}} component={Paper}>
         <Table sx={{ minWidth: 650 }} aria-label="simple table">
           <TableHead>
             <TableRow>
