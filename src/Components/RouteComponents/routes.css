@@ -62,3 +62,61 @@
         width: 80%;
     }
 }
+
+.routes-mobile-main-container{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    margin-top: 10rem;
+    align-items: center;
+}
+
+.routes-route-container{
+    width: 90%;
+    max-width: 300px;
+    height: 220px;
+    align-items: center;
+    justify-content: space-between; 
+    border-bottom-right-radius: 1.5rem ;
+    border-bottom-left-radius: 1.5rem ;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.routes-route-header{
+    background-color: rgb(107, 114, 128);
+    color: white;
+    text-align: center;
+    width: 100%;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    height: 2.5rem;
+}
+
+.routes-route-pharagraph-container{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.routes-route-link-container{
+    height: 2rem;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+}
+
+.routes-route-link{
+    cursor: pointer;
+    vertical-align: middle;
+    border-bottom-left-radius:1.5rem ;
+    border-bottom-right-radius:1.5rem;
+    font-style: italic;
+    font-weight: bold;
+    background: red;
+}

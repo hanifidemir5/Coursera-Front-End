@@ -71,17 +71,17 @@ export default function RoutesHomePage(){
       { 
         isMobile &&
         (
-          <div className='flex flex-col gap-8 justify-center mt-40'>
+          <div className='routes-mobile-main-container'>
             {
               subRoutesFromData.map((routeData) => {
                 return(
-                  <div className='w-[90%] max-w-[300px] h-[220px] items-center justify-between flex flex-col rounded-b-3xl self-center bg-white'>
-                      <h1 className='bg-gray-500 text-white text-center w-full text-2xl h-10'>{routeData.title}</h1>
-                    <div className='h-full flex flex-col align-middle justify-center'>
+                  <div className='routes-route-container'>
+                      <h1 className='routes-route-header'>{routeData.title}</h1>
+                    <div className='routes-route-pharagraph-container'>
                       <p className='mx-8'>{routeData.about}</p>
                     </div>
-                    <div className='h-8 flex flex-col w-full text-center justify-center'>
-                      <Link to={routeData.to}  className='cursor-pointer align-middle rounded-b-3xl italic bg-red-600'>{routeData.to} <FontAwesomeIcon icon={faSquareArrowUpRight} values={subRoutesFromData[0].to} className='text-black'/></Link>
+                    <div className='routes-route-link-container'>
+                      <Link to={routeData.to}  className='routes-route-link'>{routeData.to} <FontAwesomeIcon icon={faSquareArrowUpRight} values={subRoutesFromData[0].to}/></Link>
                     </div>
                   </div>
                   )
@@ -102,7 +102,7 @@ const BasicTable = ({subRoutes}) => {
             <TableRow>
               <TableCell style={{width:"300px"}}>Route Name</TableCell>
               <TableCell  style={{width:"600px"}}>Purpose</TableCell>
-              <TableCell  style={{width:"50px"}}>Visit</TableCell>
+              <TableCell  >Visit</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
